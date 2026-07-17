@@ -8,21 +8,16 @@ Formato de cifras (regla de marca): moneda con espacio `S/ 4,280` (`US$` secunda
 
 - **Ocupación promedio del portafolio**: 85% — publicada en hosteo.pe, usable desde N1. [POR COMPLETAR: periodo exacto]
 - **Calificación en Airbnb**: 4.9 — publicada, usable desde N1.
-- **Caso real publicado en la web** (usable desde N1 por ser público, ideal en N2): "Departamento en Miraflores — 2 hab.": liquidación de Junio 2026 por **S/ 5,300** (portal muestra "Pagada"), con ~26 de 30 noches ocupadas (≈87%) según el calendario publicado. [POR CONFIRMAR: si S/ 5,300 es el pago neto al propietario después de la retribución — el rótulo "liquidación" sugiere que sí]
-- **Tarifa promedio por noche, por distrito y tipología** (la pieza que falta para proyectar):
-
-| Distrito | Tipología | Tarifa promedio por noche | Ocupación | Periodo |
-|---|---|---|---|---|
-| [POR COMPLETAR] | [ej. 1 dorm] | S/ [—] | [—]% | [—] |
-
+- **Caso real publicado en la web** (usable desde N1 por ser público, ideal en N2): "Departamento en Miraflores — 2 hab.": liquidación de Junio 2026 por **S/ 5,300, pago neto al propietario** (confirmado por el usuario), con ~26 de 30 noches ocupadas (≈87%) según el calendario publicado.
+- **Tarifa promedio por noche**: NO existe una tabla fija por distrito — Hosteo la estima **por unidad**, según dirección exacta, características y fotos (así se hace la valorización real). Al generar una proyección N2, la tarifa de ESA unidad la da el usuario; si no está en la conversación, pedírsela es el primer paso.
+- **Comparables**: casos reales de unidades administradas similares (como el de arriba) sirven de respaldo y prueba. [POR COMPLETAR: más casos anonimizados por distrito/tipología — exportable de Hostaway]
 - **Comparación vs. alquiler tradicional**: [POR COMPLETAR — ej. "en promedio, X% más de ingreso neto que un alquiler anual en el mismo edificio"]
-- **Más casos reales anonimizados** (unidad, distrito, ingreso neto mensual promedio): [POR COMPLETAR — exportable de Hostaway]
 
 ## Método de proyección personalizada (Nivel 2+)
 
 Cómo construir la proyección de una unidad concreta:
 
-1. Tomar tarifa promedio por noche y ocupación de la tabla anterior para el distrito y tipología más parecidos. Si no hay fila comparable → pedir el dato al usuario.
+1. Obtener del usuario la tarifa promedio por noche estimada para ESA unidad (él la valoriza por dirección, características y fotos) y la ocupación esperada (referencia del portafolio: 85%). Sin esos dos datos no hay proyección.
 2. Ingreso bruto mensual estimado = tarifa por noche × 30.4 × ocupación.
 3. Ingreso neto propietario = bruto − retribución de Hosteo (15% del neto recibido, IGV incluido). La limpieza la paga el huésped, no se descuenta. [POR COMPLETAR: otros descuentos típicos si aplican — ej. mantenimientos menores del mes].
 4. Presentar SIEMPRE como rango (escenario conservador / esperado) y con los supuestos visibles al pie.

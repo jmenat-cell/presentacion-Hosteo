@@ -7,7 +7,8 @@ Fuente única de verdad sobre Hosteo. Los materiales comerciales solo pueden afi
 - **Nombre comercial**: Hosteo
 - **Razón social / RUC**: HOSTEO S.A.C. — RUC 20615185150
 - **Domicilio**: Parque Armendáriz 159 Int. 204, Miraflores, Lima
-- **Representante**: Francesca Maria Marsano Peschiera [POR COMPLETAR: cargo público para materiales y si firma las cartas]
+- **Gerente general**: Francesca Maria Marsano Peschiera
+- **Firmas de cartas y cierres**: Javier M. hace normalmente los cierres de propiedades nuevas y firma cartas; Francesca también puede firmar como gerente general. [POR COMPLETAR: nombre completo y cargo de Javier para la firma]
 - **Qué hace**: gestión profesional de departamentos en Airbnb y alquiler de corta estadía en Lima — de la foto al depósito — por el 15% del neto recibido, IGV incluido (el % no se publica en materiales N1).
 - **Tagline oficial**: "Hosteo tu propiedad. Tú solo cobras."
 - **Posicionamiento**: marca premium en la intersección de hospitalidad, bienes raíces y operación moderna. Socio profesional y confiable para dueños de departamentos de valor. La tecnología es invisible: se habla de resultados.
@@ -18,7 +19,7 @@ Fuente única de verdad sobre Hosteo. Los materiales comerciales solo pueden afi
 
 - **Propiedades en gestión**: 18+ (publicado como "18+ propiedades en gestión · Lima, Perú")
 - **Ocupación promedio del portafolio**: 85% (publicado; [POR COMPLETAR: periodo exacto al que corresponde])
-- **Calificación en Airbnb**: 4.9 (publicado; estatus Superhost [POR CONFIRMAR] antes de usarse como palabra)
+- **Calificación en Airbnb**: 4.9 (publicado) · **Superhost vigente**: confirmado por el usuario — "nunca hemos quedado fuera desde que nos volvimos" (sin fecha de inicio conocida; no afirmar antigüedad)
 - **Distritos donde opera**: Miraflores, San Isidro y Barranco ("de primera mano, y visitamos cada propiedad")
 - **Canales donde publica**: Airbnb, Booking, Vrbo y reservas directas — booking.hosteo.pe (motor Hostaway)
 - **Promesas públicas de servicio**: respuesta en menos de 24 horas · valorización gratuita y sin compromiso · atención a huéspedes 7 días de la semana · portal de propietarios con calendario, ingresos y liquidaciones en tiempo real

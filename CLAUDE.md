@@ -112,11 +112,13 @@ La identidad completa está en `marca/sistema-diseno.md` (resumen operativo) y `
 
 ## Estado actual / pendientes del usuario
 
-- [ ] **Tarifa promedio por noche por distrito/tipología** (exportable de Hostaway) — lo único que falta para proyecciones N2 completas. Ya se tiene: 85% ocupación, 4.9 en Airbnb, caso real S/ 5,300 (Jun 2026, 2 hab Miraflores).
-- [ ] `contenido/empresa.md`: año de inicio, cargo público de Francesca y quién firma las cartas, testimonios autorizados.
-- [ ] Confirmar estatus Superhost y el periodo del 85% de ocupación; confirmar que S/ 5,300 es pago neto al propietario.
+Resuelto: Superhost vigente ✓ · S/ 5,300 es neto al propietario ✓ · tarifa por noche se estima POR UNIDAD en la valorización (no hay tabla fija; pedirla al usuario en cada proyección N2) ✓ · fotos de 6 unidades en `marca/activos/` ✓ · Francesca Marsano es gerente general; Javier M. hace los cierres ✓
+
+- [ ] Nombre completo y cargo de Javier para las firmas de cartas.
+- [ ] `contenido/empresa.md`: año de inicio, periodo del 85% de ocupación, testimonios autorizados.
 - [ ] Detalle operativo N3 para el dossier: onboarding interno paso a paso, checklist de entrega, primeros 30 días (la versión pública de 3 pasos ya está en `contenido/copy-web.md`).
-- [ ] Fotos de más unidades en `marca/activos/` (la web usa prop-miraflores.jpg, prop-san-isidro.jpg, prop-barranco.jpg, etc. — solo se entregó foto-hero.jpg) y, si existe, logo en SVG o en paleta cálida.
+- [ ] Casos reales adicionales por distrito/tipología (export de Hostaway) para respaldar proyecciones.
+- [ ] Logo en SVG o paleta cálida, si existe.
 - [ ] Automatización WhatsApp→ficha v1: decisiones pendientes en `automatizacion/whatsapp-a-ficha.md`.
 
 Cuando el usuario entregue algo de esto: intégralo en `contenido/` o `marca/`, borra el marcador correspondiente y actualiza esta lista.

@@ -13,7 +13,7 @@ Argumentos: nombre o slug del prospecto y, opcionalmente, un nivel explícito (1
 2. **Nivel**: usa el nivel pedido en el argumento; si no hay, el del perfil; si tampoco, pregunta. **Si el nivel pedido supera el autorizado en el perfil, detente y pide confirmación al usuario** (regla dura). Si la confirma, actualiza el nivel en el perfil.
 3. **Insumos**: lee `contenido/empresa.md`, `contenido/servicio.md`, `contenido/numeros.md`, `marca/sistema-diseno.md` y el perfil. Antes de escribir nada, verifica que los datos que ese nivel necesita NO estén `[POR COMPLETAR]`:
    - N1: propuesta de valor, resumen del servicio, prueba social, contacto.
-   - N2: además comisión %, condiciones y datos para la proyección de su distrito/tipología.
+   - N2: además comisión %, condiciones y la proyección de SU unidad — la tarifa por noche estimada la da el usuario (la valoriza por dirección, características y fotos; ver `contenido/numeros.md`). Si no la tienes, pídesela antes de generar.
    - Si falta algo esencial, lista lo que falta y pídeselo al usuario. No inventes ni un número.
 4. **Genera el HTML**: copia `plantillas/presentacion.html` a `prospectos/<slug>/entregables/AAAA-MM-DD-presentacion-n<N>.html` y edítalo:
    - Elimina por completo las `<section class="slide">` con `data-nivel` mayor que el nivel del material.
