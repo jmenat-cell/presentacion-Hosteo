@@ -2,6 +2,8 @@
 
 Métricas reales de Hosteo y método para proyectar el ingreso de una unidad. **Regla dura**: si esta página está incompleta para el caso que necesitas, no proyectes — pide los datos. Un número inventado en una propuesta es un contrato perdido o un cliente decepcionado.
 
+Formato de cifras (regla de marca): moneda con espacio `S/ 4,280` (`US$` secundario) · porcentajes sin decimales `92%` · fechas `15 Abr 2026`.
+
 ## Métricas reales (usables desde Nivel 2, salvo que se marque N1)
 
 - **Ocupación promedio del portafolio**: [POR COMPLETAR]% (periodo: [POR COMPLETAR])
@@ -20,7 +22,7 @@ Cómo construir la proyección de una unidad concreta:
 
 1. Tomar tarifa promedio por noche y ocupación de la tabla anterior para el distrito y tipología más parecidos. Si no hay fila comparable → pedir el dato al usuario.
 2. Ingreso bruto mensual estimado = tarifa por noche × 30.4 × ocupación.
-3. Ingreso neto propietario = bruto − comisión de Hosteo ([POR COMPLETAR]%) − [POR COMPLETAR: otros descuentos si aplican].
+3. Ingreso neto propietario = bruto − retribución de Hosteo (15% del neto recibido, IGV incluido). La limpieza la paga el huésped, no se descuenta. [POR COMPLETAR: otros descuentos típicos si aplican — ej. mantenimientos menores del mes].
 4. Presentar SIEMPRE como rango (escenario conservador / esperado) y con los supuestos visibles al pie.
 5. Nunca prometer: la palabra correcta es "estimado" o "proyección", nunca "garantizado" (salvo que el plan lo garantice por contrato).
 

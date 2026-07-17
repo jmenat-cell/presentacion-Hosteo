@@ -18,7 +18,7 @@ Argumentos: nombre o slug del prospecto y, opcionalmente, un nivel explícito (1
 4. **Genera el HTML**: copia `plantillas/presentacion.html` a `prospectos/<slug>/entregables/AAAA-MM-DD-presentacion-n<N>.html` y edítalo:
    - Elimina por completo las `<section class="slide">` con `data-nivel` mayor que el nivel del material.
    - Reemplaza todos los `⟦corchetes⟧` con datos reales del perfil y de `contenido/`; personaliza portada y CTA con el nombre del prospecto y su unidad. No debe quedar ningún `⟦` en el archivo final.
-   - Redacta el copy con la voz de `marca/sistema-diseno.md`: tuteo cercano, frases cortas, beneficio antes que característica, español de Perú.
+   - Redacta el copy con la voz de `marca/sistema-diseno.md`: tuteo cercano, frases cortas, beneficio antes que característica, español de Perú. Sin signos de exclamación ni emojis; cifras `S/ 4,280`; serif nunca en bold.
    - En N2, arma la proyección siguiendo el método de `contenido/numeros.md` (rango + supuestos al pie).
 5. **Renderiza y verifica**: `scripts/html2pdf.sh <ruta>.html <ruta>.pdf`. Lee el PDF generado (Read renderiza PDFs) y revisa: sin `⟦corchetes⟧`, sin texto cortado ni slides desbordadas, sin contenido de nivel superior filtrado.
 6. **Registra**: agrega la fila en "Entregables enviados" del perfil (fecha, tipo, nivel, archivo) y una línea al historial. Actualiza el estado si corresponde (ej. → "propuesta enviada").

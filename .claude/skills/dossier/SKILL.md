@@ -11,8 +11,8 @@ Argumento: nombre o slug del prospecto. Lee primero `CLAUDE.md`. Este es el mate
 
 1. **Prospecto**: perfil obligatorio (sin excepción: un dossier siempre es para alguien concreto). Si el nivel autorizado del perfil es menor que 3, **detente y confirma con el usuario** que este prospecto amerita nivel 3; si confirma, actualiza el perfil.
 2. **Verifica los insumos N3** antes de empezar:
-   - `contenido/servicio.md` — sección "CONFIDENCIAL (N3)" completa (procesos, onboarding, checklist de entrega, primeros 30 días).
-   - `contenido/legal/contrato-modelo.md` — **requisito**: si no existe, avisa al usuario; solo con su aprobación explícita genera el dossier sin sección de contrato.
+   - `contenido/legal/contrato-modelo.md` — resumen anonimizado del contrato real: términos clave, qué asume cada parte y la doctrina "el contrato protege, el material vende". El dossier presenta los términos en simple y en positivo, sin copiar la letra chica defensiva.
+   - `contenido/servicio.md` — sección "CONFIDENCIAL (N3)": procesos, onboarding, checklist de entrega, primeros 30 días.
    - `contenido/numeros.md` — datos para la proyección de su unidad.
    - Lo que esté `[POR COMPLETAR]` y sea necesario: lístalo y pídelo. Nada inventado.
 3. **Estructura** sobre `plantillas/documento.html` (una `<section class="pagina">` por página), guardado en `prospectos/<slug>/entregables/AAAA-MM-DD-dossier-n3.html`:

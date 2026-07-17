@@ -1,35 +1,53 @@
-# Sistema de diseño de Hosteo
+# Sistema de diseño de Hosteo (marca real)
 
-**Estado: PLACEHOLDER.** Esta paleta y tipografía son provisionales, elegidas para que las plantillas se vean profesionales desde el día uno. Cuando el usuario entregue la marca real (web, logo, manual de marca), reemplazar aquí los valores y actualizar el bloque `:root` de las plantillas en `plantillas/` para que coincidan.
+Fuente: el Hosteo Design System entregado por el usuario (16 Jul 2026). La referencia técnica completa de tokens está en `marca/colors_and_type.css` (copiada verbatim del sistema). Este archivo es el resumen operativo para generar material comercial.
 
-## Colores
+**Posicionamiento**: Hosteo es una marca premium de administración de alquiler de corta estadía en Lima — hospitalidad + estrategia de ingresos + operación impecable + tecnología invisible. Dirigida a propietarios de departamentos de valor que buscan un socio profesional y confiable, no una "startup". El look es **editorial, arquitectónico y calmado** (revista de interiores boutique, no dashboard SaaS).
+
+## Colores (usar estos tokens, nunca hex sueltos)
 
 | Token | Valor | Uso |
 |---|---|---|
-| `--color-primario` | `#14343B` | Fondos de portada, títulos, footer (petróleo oscuro) |
-| `--color-acento` | `#E29E4B` | Acentos, cifras destacadas, llamados a la acción (ámbar cálido) |
-| `--color-fondo` | `#FAF7F2` | Fondo de páginas claras (arena) |
-| `--color-texto` | `#1D2A2E` | Texto principal sobre fondo claro |
-| `--color-texto-suave` | `#5A6B70` | Texto secundario, pies, letra chica |
-| `--color-blanco` | `#FFFFFF` | Texto sobre fondo primario |
+| `--bone` | `#F6F2EC` | Fondo de página/slide claro |
+| `--paper` | `#FBF8F3` | Tarjetas, texto sobre oscuro |
+| `--linen` | `#EFE8DC` | Bandas/bloques sutiles |
+| `--sand` | `#E4DACB` | Chips, superficies elevadas |
+| `--taupe` | `#8A8170` | Texto secundario, eyebrows |
+| `--clay` | `#6B6355` | Texto de cuerpo |
+| `--charcoal` | `#3A342B` | Titulares, texto principal |
+| `--espresso` | `#221E18` | Superficies oscuras (portadas) — nunca negro puro |
+| `--bronze` | `#8A6A3B` | Único acento: cifras clave, énfasis, CTA |
+| hairlines | `rgba(58,52,43,.08 / .14)` | Toda separación; sin bordes gruesos |
 
-Regla: fondos oscuros solo con `--color-primario`; el acento nunca como fondo de bloques grandes de texto.
+Prohibido: gradientes, azul-morado SaaS, neón, neumorfismo. El navy `#0E2B6C` y teal `#3CA99A` son **solo del logo actual** (no usarlos en superficies).
 
-## Tipografía
+## Tipografía (local, en `marca/activos/fuentes/` — los PDF renderizan sin red)
 
-- **Familia**: stack de sistema — `-apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`. [POR COMPLETAR: tipografía real de marca; si es de Google Fonts, descargar el .woff2 a `marca/activos/` e incrustarla, los PDF se generan sin red]
-- **Escala en el deck**: título portada ~64px, título de slide ~40px, cuerpo 20–24px, letra chica 13px.
-- **Escala en documentos A4**: título 24pt, cuerpo 11pt, letra chica 8pt.
+- **Display serif**: Cormorant Garamond (`CormorantGaramond-{400,500,600}.woff2`) para titulares y cifras destacadas. Pesos 400–600, **nunca bold**, tracking levemente negativo.
+- **Sans**: Inter variable (`Inter-VariableFont_opsz_wght.ttf`, la fuente de marca del cliente) para cuerpo, etiquetas, tablas. Pesos 400/500/600; 700 solo énfasis puntual.
+- **Eyebrow** (dispositivo firma de la marca): 11–14px, MAYÚSCULAS, tracking `0.18em`, color taupe (bronce en oscuro).
+- Cuerpo con line-height 1.55–1.7, bloques de texto ≤ 62ch. Radios pequeños (4–10px).
 
-## Logo y activos
+## Voz (aplicar en TODO el copy)
 
-- `marca/activos/` — colocar aquí: logo (SVG o PNG fondo transparente), variante clara para fondos oscuros, fotos reales de unidades administradas (las fotos reales venden más que cualquier stock).
-- Mientras no haya logo, las plantillas usan el wordmark tipográfico "hosteo" en `--color-blanco`/`--color-primario`.
-- En los HTML finales, incrustar imágenes como data URI o ruta relativa local (el render de PDF no descarga recursos externos).
+- **Tuteo peruano cálido y competente**. "Nosotros" (nunca "el equipo"). Calma sobre ingenio.
+- **Sin emojis. Sin signos de exclamación. Nunca.**
+- Frases cortas, declarativas, con sustantivos y números concretos: "Tarifa promedio: S/ 412 por noche" le gana a "ingresos increíbles". (La cifra del ejemplo es ilustrativa del estilo, no un dato real.)
+- Sentence case en títulos y botones. MAYÚSCULAS solo en eyebrows. La tecnología es invisible: se habla de resultados (ocupación, ingreso, tranquilidad), no de software.
+- Formatos: moneda `S/ 4,280` (con espacio; `US$` secundario) · porcentajes `92%` sin decimales · fechas `15 Abr 2026`.
+- Tagline oficial: **"Hosteo tu propiedad. Tú solo cobras."**
+- Flechas tipográficas `→` permitidas al final de links/CTA; iconos solo Lucide (trazo 1.5px) y nunca decorativos.
 
-## Voz de la marca
+## Logos (`marca/activos/`)
 
-- Tuteo cercano y profesional. Cálido, directo, sin jerga corporativa.
-- Beneficio antes que característica: "recibes tu liquidación cada mes" antes que "software de gestión".
-- Frases cortas. Números presentados con honestidad (rangos y supuestos, no promesas).
-- En español de Perú: alquiler, departamento, distritos.
+- `logo-horizontal.png` — lockup horizontal navy+teal, fondo transparente. Para cabeceras sobre fondos claros.
+- `logo-mark-charcoal.png` — la casita-flecha en charcoal, transparente. Dispositivo de marca sobre claros.
+- Sobre espresso (portadas): usar wordmark tipográfico "Hosteo" en paper (el logo navy no contrasta). Pendiente del usuario: logo en paleta cálida o SVG original.
+
+## Adaptación comercial (autorizada por el usuario)
+
+Estos materiales venden; el sistema se respeta pero con jerarquía persuasiva:
+
+- Las cifras que cierran (ingreso neto, 15%, ocupación) pueden ir grandes, en serif y bronce.
+- La letra chica se mantiene mínima y honesta (los términos duros viven en el contrato, ver CLAUDE.md).
+- Lo NO negociable ni en versión comercial: emojis, signos de exclamación, gradientes, serif en bold, promesas infladas.

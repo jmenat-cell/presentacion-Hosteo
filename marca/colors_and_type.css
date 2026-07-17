@@ -1,0 +1,231 @@
+/* =========================================================================
+   Hosteo Design System — Colors & Type
+   Editorial, warm-neutral, boutique-hospitality
+   ========================================================================= */
+
+/* ---------- Web fonts ----------
+   Body/UI: Inter (user-provided brand font, loaded locally from fonts/).
+   Display: Cormorant Garamond from Google Fonts — still a substitution,
+            flagged to the user for replacement with a licensed display serif.
+   Mono:    JetBrains Mono — sparingly, for data/ids only.
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Inter — user-provided brand font. Variable-font build: a single file covers
+   all weights 100–900 and optical sizes 14–32 via `font-variation-settings`. */
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-VariableFont_opsz_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Italic-VariableFont_opsz_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* ============================= COLOR — BASE ============================ */
+  /* Warm off-whites & sand — page backgrounds, cards */
+  --c-bone:        #F6F2EC;  /* page bg, warm off-white */
+  --c-paper:       #FBF8F3;  /* softer card/section bg */
+  --c-linen:       #EFE8DC;  /* subtle block, divider bg */
+  --c-sand:        #E4DACB;  /* raised surface, chip bg */
+  --c-stone:       #C9BEA9;  /* muted accent, quiet badges */
+
+  /* Warm greys → taupe → espresso — text, strong surfaces */
+  --c-fog:         #D9D3C6;  /* hairline on light */
+  --c-mist:        #B7AF9E;  /* tertiary text on light */
+  --c-taupe:       #8A8170;  /* secondary text */
+  --c-clay:        #6B6355;  /* body on light (readable) */
+  --c-charcoal:    #3A342B;  /* headline, primary text */
+  --c-espresso:    #221E18;  /* deepest surface, ink */
+
+  /* Accents — subtle luxury only */
+  --c-bronze:      #8A6A3B;  /* highlight, badge, icon accent */
+  --c-bronze-dim:  #6F5530;  /* hover / pressed */
+  --c-olive:       #6E6A4A;  /* secondary accent — ops, stable */
+  --c-sage:        #8E9A7C;  /* soft success-adjacent, neutral */
+
+  /* Legacy brand (from existing logo — preserve for logo use only) */
+  --c-brand-navy:  #0E2B6C;
+  --c-brand-teal:  #3CA99A;
+
+  /* ========================== COLOR — SEMANTIC ========================== */
+  --fg-1:          var(--c-charcoal);   /* primary text */
+  --fg-2:          var(--c-clay);       /* body */
+  --fg-3:          var(--c-taupe);      /* secondary */
+  --fg-4:          var(--c-mist);       /* tertiary / captions */
+  --fg-inverse:    var(--c-paper);      /* text on dark surface */
+
+  --bg-1:          var(--c-bone);       /* page */
+  --bg-2:          var(--c-paper);      /* elevated card */
+  --bg-3:          var(--c-linen);      /* sunken band */
+  --bg-4:          var(--c-sand);       /* chip / subtle fill */
+  --bg-dark:       var(--c-espresso);   /* dark section */
+  --bg-dark-2:     var(--c-charcoal);   /* dark card on dark section */
+
+  --line-1:        rgba(58, 52, 43, 0.08);  /* hairline */
+  --line-2:        rgba(58, 52, 43, 0.14);  /* standard border */
+  --line-3:        rgba(58, 52, 43, 0.22);  /* strong divider */
+  --line-inverse:  rgba(251, 248, 243, 0.12);
+
+  --accent:        var(--c-bronze);
+  --accent-hover:  var(--c-bronze-dim);
+  --accent-soft:   rgba(138, 106, 59, 0.08);
+
+  /* Status — muted, never neon */
+  --ok:            #5E7A5A;     /* deep sage */
+  --ok-soft:       #E6EADF;
+  --warn:          #A67B3C;     /* warm amber-bronze */
+  --warn-soft:     #F1E7D3;
+  --danger:        #8F3E37;     /* muted terracotta */
+  --danger-soft:   #F1DED9;
+  --info:          #4B5E74;     /* muted slate-blue */
+  --info-soft:     #DDE3EA;
+
+  /* ================================ TYPE ================================ */
+  --font-serif:    'Cormorant Garamond', 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans:     'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono:     'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Scale — editorial, generous */
+  --fs-display:    clamp(48px, 7vw, 88px);
+  --fs-h1:         clamp(36px, 4.2vw, 56px);
+  --fs-h2:         clamp(28px, 3vw, 40px);
+  --fs-h3:         22px;
+  --fs-h4:         18px;
+  --fs-body:       16px;
+  --fs-small:      14px;
+  --fs-micro:      12px;
+  --fs-eyebrow:    11px;
+
+  /* Line-heights */
+  --lh-tight:      1.05;
+  --lh-snug:       1.2;
+  --lh-body:       1.55;
+  --lh-loose:      1.7;
+
+  /* Tracking */
+  --ls-eyebrow:    0.18em;
+  --ls-caps:       0.08em;
+  --ls-display:    -0.02em;
+  --ls-h1:         -0.015em;
+  --ls-tight:      -0.01em;
+
+  /* =========================== SPACING & SHAPE ========================== */
+  --sp-0:  0;
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+  --sp-10: 128px;
+
+  --r-xs:   2px;
+  --r-sm:   4px;
+  --r-md:   6px;
+  --r-lg:   10px;
+  --r-xl:   16px;
+  --r-pill: 999px;
+
+  /* Soft, restrained shadows */
+  --shadow-1: 0 1px 2px rgba(34, 30, 24, 0.04), 0 1px 1px rgba(34, 30, 24, 0.03);
+  --shadow-2: 0 4px 10px rgba(34, 30, 24, 0.05), 0 2px 4px rgba(34, 30, 24, 0.04);
+  --shadow-3: 0 12px 28px rgba(34, 30, 24, 0.08), 0 4px 10px rgba(34, 30, 24, 0.04);
+  --shadow-inset: inset 0 0 0 1px var(--line-1);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast: 120ms;
+  --t-med:  220ms;
+  --t-slow: 420ms;
+}
+
+/* =============================== ELEMENTS ================================ */
+
+html, body {
+  background: var(--bg-1);
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--fg-1);
+  font-weight: 500;
+  margin: 0;
+}
+
+h1 { font-size: var(--fs-h1); line-height: var(--lh-tight); letter-spacing: var(--ls-h1); }
+h2 { font-size: var(--fs-h2); line-height: var(--lh-snug); letter-spacing: var(--ls-tight); }
+h3 { font-size: var(--fs-h3); line-height: var(--lh-snug); font-weight: 500; }
+h4 { font-size: var(--fs-h4); line-height: 1.35;  font-weight: 500; font-family: var(--font-sans); letter-spacing: 0; }
+
+.display {
+  font-family: var(--font-serif);
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-display);
+  font-weight: 400;
+  color: var(--fg-1);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--fg-3);
+  font-weight: 500;
+}
+
+.caps {
+  text-transform: uppercase;
+  letter-spacing: var(--ls-caps);
+  font-weight: 500;
+}
+
+p {
+  margin: 0 0 var(--sp-4);
+  color: var(--fg-2);
+  max-width: 62ch;
+}
+
+small, .small { font-size: var(--fs-small); color: var(--fg-3); }
+.micro        { font-size: var(--fs-micro); color: var(--fg-4); }
+
+code, kbd, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  color: var(--fg-2);
+}
+
+a {
+  color: var(--fg-1);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-3);
+  transition: color var(--t-fast) var(--ease-out), border-color var(--t-fast) var(--ease-out);
+}
+a:hover { color: var(--accent); border-color: var(--accent); }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line-2);
+  margin: var(--sp-6) 0;
+}
+
+::selection { background: var(--accent-soft); color: var(--c-espresso); }

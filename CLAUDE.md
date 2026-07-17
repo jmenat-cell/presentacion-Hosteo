@@ -43,6 +43,10 @@ Material comercial con datos falsos destruye la venta y la reputación de Hosteo
 - Si el dato necesario está `[POR COMPLETAR]`, pídeselo al usuario o deja el marcador visible en el borrador — nunca lo rellenes con algo plausible.
 - El copy de venta (títulos, transiciones, llamados a la acción) sí puedes redactarlo y mejorarlo libremente; los hechos no.
 
+## El contrato protege, el material vende
+
+Doctrina del usuario para todo material comercial: los términos que el propietario necesita para decidir se dicen claros y en positivo — retribución **15% del neto recibido, IGV incluido**, liquidación mensual dentro de 5 días hábiles, plazo de 1 año con salida con aviso de 30 días, limpieza pagada por el huésped, canales Airbnb/Booking/Vrbo/directas (fuente: `contenido/legal/contrato-modelo.md`). La letra chica defensiva (indemnidades, penalidades, límites de responsabilidad) vive en el contrato: no se exagera en presentaciones ni cartas, y se explica en simple solo cuando el prospecto pregunta o en el dossier N3.
+
 ## Estructura
 
 ```
@@ -77,21 +81,37 @@ scripts/html2pdf.sh entrada.html salida.pdf
 
 Usa Chromium headless (en este entorno remoto: `/opt/pw-browsers/chromium`; respeta la variable `CHROMIUM_BIN`). Las plantillas controlan el tamaño de página con `@page` (deck: 1280×720 px; documento: A4). No hay dependencias de npm. Verifica el PDF generado leyéndolo (la herramienta Read renderiza PDFs) antes de darlo por bueno.
 
-## Convenciones de redacción
+**Ubicación de render**: las plantillas cargan fuentes y logos con rutas relativas (`../../../marca/...`) calibradas para `prospectos/<slug>/entregables/`. Genera y renderiza los HTML siempre desde ahí (las vistas previas viven en `prospectos/_ejemplo/entregables/`); un HTML renderizado desde otra profundidad pierde las fuentes de marca.
 
-- Español de Perú: "alquiler" (no arriendo ni renta), "departamento", distritos (Miraflores, Barranco, San Isidro…). Moneda: soles `S/`; USD solo si `contenido/` lo indica para ese dato.
-- Tono: cercano y profesional — tuteo ("tú"), cálido, directo, sin jerga corporativa vacía. Frases cortas. Beneficio antes que característica.
-- El destinatario es un propietario, no un técnico: cero siglas de STR sin explicar (di "tarifa promedio por noche", no "ADR", o explícalo la primera vez).
+## Marca y redacción (marca real desde Jul 2026)
+
+La identidad completa está en `marca/sistema-diseno.md` (resumen operativo) y `marca/colors_and_type.css` (tokens de referencia). Lo innegociable al escribir cualquier material:
+
+- **Sin emojis. Sin signos de exclamación. Nunca.** Calma sobre ingenio; la marca es editorial y premium, no una startup ruidosa.
+- Tuteo peruano cálido y competente; "nosotros", nunca "el equipo". Frases cortas, declarativas, con números concretos en vez de adjetivos.
+- Sentence case en títulos; MAYÚSCULAS solo en eyebrows. Serif (Cormorant) para titulares y cifras destacadas, **nunca en bold**; Inter para todo lo demás.
+- Formatos: `S/ 4,280` (espacio tras S/; `US$` secundario) · `92%` sin decimales · fechas `15 Abr 2026`.
+- Español de Perú: "alquiler" (no arriendo ni renta), "departamento", distritos. Cero siglas de STR sin explicar (di "tarifa promedio por noche", no "ADR").
+- Tagline oficial: "Hosteo tu propiedad. Tú solo cobras."
+- Adaptación comercial permitida: jerarquía persuasiva y cifras clave grandes (serif + bronce), manteniendo los innegociables.
 - Archivos y directorios en kebab-case y en español.
 
 ## Privacidad
 
-`prospectos/` contiene datos personales de clientes potenciales. Este repositorio es privado: no publiques su contenido (Artifacts, gists, servicios externos) ni copies datos de prospectos fuera del repo.
+`prospectos/` contiene datos personales de clientes potenciales. Este repositorio es privado: no publiques su contenido (Artifacts, gists, servicios externos) ni copies datos de prospectos fuera del repo. Los contratos firmados reales tampoco se suben: al repo solo entran resúmenes anonimizados (como `contenido/legal/contrato-modelo.md`, sin DNI, dirección ni correo del propietario).
+
+## Notas del entorno
+
+- La web `hosteo.pe` NO es accesible desde este entorno remoto (la política de red del proxy la bloquea, igual que la mayoría de sitios). Para contenido de la web, pídelo al usuario. Google Fonts (`fonts.googleapis.com`/`gstatic`) sí está permitido.
+- Las fuentes de marca ya están vendorizadas en `marca/activos/fuentes/`; los PDF renderizan sin red.
 
 ## Estado actual / pendientes del usuario
 
-- [ ] `contenido/`: completar todos los `[POR COMPLETAR]` (% de comisión, métricas reales, testimonios, datos de la empresa).
-- [ ] `marca/sistema-diseno.md`: reemplazar la paleta placeholder por la marca real de Hosteo (logo, colores, tipografías, fotos en `marca/activos/`).
-- [ ] `contenido/legal/contrato-modelo.md`: agregar el contrato real (requisito de `/dossier`).
+- [ ] Métricas reales en `contenido/numeros.md`: ocupación, tarifa promedio por noche por distrito/tipología, comparativa vs. alquiler tradicional, casos reales. **Sin esto no se pueden generar proyecciones (slides N2).**
+- [ ] `contenido/empresa.md`: año de inicio, número de unidades, lista completa de distritos, WhatsApp, Instagram, nombre y cargo de quien firma las cartas, testimonios autorizados.
+- [ ] Confirmar estatus Superhost antes de usarlo en materiales.
+- [ ] Política de noches del propietario (cómo se ofrece comercialmente) y cobertura de daños exacta (AirCover/depósitos/seguro) — ver `[POR COMPLETAR]` en `contenido/servicio.md` y `objeciones.md`.
+- [ ] Detalle operativo N3 para el dossier: onboarding paso a paso, checklist de entrega, primeros 30 días.
+- [ ] Fotos reales de unidades en `marca/activos/` y, si existe, logo en SVG o en paleta cálida.
 
-Cuando el usuario entregue su web, contrato o sistema de diseño: intégralos en estos archivos, actualiza las plantillas y elimina de esta sección lo que ya no falte.
+Cuando el usuario entregue algo de esto: intégralo en `contenido/` o `marca/`, borra el marcador correspondiente y actualiza esta lista.
