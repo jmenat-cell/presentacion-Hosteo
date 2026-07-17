@@ -112,9 +112,8 @@ La identidad completa está en `marca/sistema-diseno.md` (resumen operativo) y `
 
 ## Estado actual / pendientes del usuario
 
-Resuelto: Superhost vigente ✓ · S/ 5,300 es neto al propietario ✓ · tarifa por noche se estima POR UNIDAD en la valorización (no hay tabla fija; pedirla al usuario en cada proyección N2) ✓ · fotos de 6 unidades en `marca/activos/` ✓ · Francesca Marsano es gerente general; Javier M. hace los cierres ✓
+Resuelto: Superhost vigente ✓ · S/ 5,300 es neto al propietario ✓ · tarifa por noche se estima POR UNIDAD en la valorización (no hay tabla fija; pedirla al usuario en cada proyección N2) ✓ · fotos de 6 unidades en `marca/activos/` ✓ · Francesca Marsano es gerente general; **Javier Mena, Director Comercial**, firma cartas y cierres ✓
 
-- [ ] Nombre completo y cargo de Javier para las firmas de cartas.
 - [ ] `contenido/empresa.md`: año de inicio, periodo del 85% de ocupación, testimonios autorizados.
 - [ ] Detalle operativo N3 para el dossier: onboarding interno paso a paso, checklist de entrega, primeros 30 días (la versión pública de 3 pasos ya está en `contenido/copy-web.md`).
 - [ ] Casos reales adicionales por distrito/tipología (export de Hostaway) para respaldar proyecciones.

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Hosteo — Propuesta para Alfredo Abregu</title>
+<style>
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../../marca/activos/fuentes/CormorantGaramond-400.woff2') format('woff2');
+    font-weight: 400; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../../marca/activos/fuentes/CormorantGaramond-500.woff2') format('woff2');
+    font-weight: 500; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../../marca/activos/fuentes/CormorantGaramond-600.woff2') format('woff2');
+    font-weight: 600; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('../../../marca/activos/fuentes/Inter-VariableFont_opsz_wght.ttf') format('truetype-variations');
+    font-weight: 100 900; font-style: normal;
+  }
+
+  :root {
+    --bone: #F6F2EC; --paper: #FBF8F3; --linen: #EFE8DC; --sand: #E4DACB;
+    --taupe: #8A8170; --clay: #6B6355; --charcoal: #3A342B; --espresso: #221E18;
+    --bronze: #8A6A3B;
+    --line-1: rgba(58, 52, 43, 0.08); --line-2: rgba(58, 52, 43, 0.14);
+    --line-inv: rgba(251, 248, 243, 0.14);
+    --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: 1280px 720px; margin: 0; }
+  html, body { font-family: var(--sans); color: var(--charcoal); }
+
+  .slide {
+    width: 1280px; height: 720px;
+    page-break-after: always; break-after: page;
+    overflow: hidden; position: relative;
+    background: var(--bone);
+    padding: 76px 96px;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    display: flex; flex-direction: column;
+  }
+  .slide.oscura { background: var(--espresso); color: var(--paper); }
+
+  .foto-fondo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .velo { position: absolute; inset: 0; background: rgba(34, 30, 24, 0.66); }
+  .sobre-foto { position: relative; }
+
+  .eyebrow {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--taupe); margin-bottom: 18px;
+  }
+  .oscura .eyebrow { color: var(--bronze); }
+
+  .display {
+    font-family: var(--serif); font-weight: 400; font-size: 76px;
+    line-height: 1.05; letter-spacing: -0.02em;
+  }
+  h2 {
+    font-family: var(--serif); font-weight: 500; font-size: 46px;
+    line-height: 1.12; letter-spacing: -0.015em; margin-bottom: 30px;
+  }
+  p.cuerpo { font-size: 21px; line-height: 1.6; color: var(--clay); max-width: 62ch; }
+  .oscura p.cuerpo { color: rgba(251, 248, 243, 0.75); }
+  .bronce { color: var(--bronze); }
+
+  .pie {
+    position: absolute; left: 96px; right: 96px; bottom: 34px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; color: var(--taupe);
+    border-top: 1px solid var(--line-1); padding-top: 14px;
+  }
+  .oscura .pie { color: rgba(251, 248, 243, 0.45); border-top-color: var(--line-inv); }
+  .pie img { height: 22px; display: block; }
+  .wordmark { font-family: var(--sans); font-weight: 600; font-size: 20px; letter-spacing: -0.01em; }
+
+  .filete { width: 56px; height: 1px; background: var(--bronze); margin: 30px 0; }
+
+  .grilla { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 22px; margin-top: 6px; }
+  .tarjeta {
+    background: var(--paper); border-radius: 10px; padding: 26px 30px;
+    box-shadow: inset 0 0 0 1px var(--line-1);
+  }
+  .tarjeta h3 { font-family: var(--sans); font-weight: 600; font-size: 19px; margin-bottom: 8px; }
+  .tarjeta p { font-size: 15.5px; line-height: 1.55; color: var(--clay); }
+  .tarjeta .num {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.18em; color: var(--taupe);
+    display: block; margin-bottom: 12px;
+  }
+
+  .metricas { display: flex; gap: 72px; margin-top: 34px; }
+  .metrica .valor { font-family: var(--serif); font-weight: 500; font-size: 64px; line-height: 1; letter-spacing: -0.01em; }
+  .metrica .etiqueta { font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--taupe); margin-top: 12px; }
+
+  table.proyeccion { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 19px; }
+  table.proyeccion td { padding: 16px 4px; border-bottom: 1px solid var(--line-2); color: var(--clay); }
+  table.proyeccion td:last-child { text-align: right; font-weight: 600; color: var(--charcoal); font-variant-numeric: tabular-nums; }
+  table.proyeccion tr.total td {
+    border-bottom: none; padding-top: 26px; color: var(--charcoal);
+    font-family: var(--serif); font-weight: 500; font-size: 30px; letter-spacing: -0.01em;
+  }
+  table.proyeccion tr.total td:last-child { color: var(--bronze); }
+  .letra-chica { font-size: 11.5px; line-height: 1.5; color: var(--taupe); margin-top: 20px; max-width: 900px; }
+</style>
+</head>
+<body>
+
+<!-- 01 · PORTADA -->
+<section class="slide oscura" style="justify-content: space-between;">
+  <img class="foto-fondo" src="../../../marca/activos/foto-miraflores-2.jpg" alt="">
+  <div class="velo"></div>
+  <div class="wordmark sobre-foto">Hosteo</div>
+  <div class="sobre-foto">
+    <div class="eyebrow">Administración de alquiler de corta estadía · Lima</div>
+    <div class="display">Hosteo tu propiedad.<br>Tú solo cobras.</div>
+    <div class="filete"></div>
+    <p class="cuerpo">Preparado para Alfredo Abregu · 1 dormitorio en Urban Heights, Miraflores</p>
+  </div>
+  <div class="pie sobre-foto"><span>Lima · 17 Jul 2026</span><span>Confidencial — preparado exclusivamente para Alfredo Abregu</span></div>
+</section>
+
+<!-- 02 · TU INVERSIÓN -->
+<section class="slide">
+  <div class="eyebrow">Tu inversión</div>
+  <h2>Compraste bien. Ahora, que rinda.</h2>
+  <p class="cuerpo">Un 1 dormitorio de estreno en Miraflores, sobre Paseo de la República, es el tipo de unidad que funciona en corta estadía. La diferencia entre un Airbnb más y uno que rinde está en la operación: fotografía que compite, tarifas que se mueven con la demanda y huéspedes bien atendidos, todos los días. Eso es lo que hacemos nosotros — y conocemos Miraflores de primera mano.</p>
+  <div class="metricas">
+    <div class="metrica"><div class="valor bronce">S/ 5,300</div><div class="etiqueta">liquidación neta real — 2 dorm en Miraflores, Jun 2026</div></div>
+  </div>
+  <div class="pie"><img src="../../../marca/activos/logo-horizontal.png" alt="Hosteo"><span>02</span></div>
+</section>
+
+<!-- 03 · QUIÉNES SOMOS -->
+<section class="slide">
+  <div class="eyebrow">Quiénes somos</div>
+  <h2>Operamos tu departamento de punta a punta</h2>
+  <p class="cuerpo">Gestión profesional de propiedades en Airbnb y alquiler de corta estadía en Lima: publicamos en Airbnb, Booking, Vrbo y reservas directas, y nos ocupamos de todo el ciclo — de la foto al depósito. Trabajamos Miraflores, San Isidro y Barranco de primera mano, y visitamos cada propiedad.</p>
+  <div class="metricas">
+    <div class="metrica"><div class="valor">18+</div><div class="etiqueta">propiedades en gestión</div></div>
+    <div class="metrica"><div class="valor">4.9</div><div class="etiqueta">calificación en Airbnb</div></div>
+    <div class="metrica"><div class="valor">Superhost</div><div class="etiqueta">estatus vigente en Airbnb</div></div>
+  </div>
+  <div class="pie"><img src="../../../marca/activos/logo-horizontal.png" alt="Hosteo"><span>03</span></div>
+</section>
+
+<!-- 04 · EL SERVICIO -->
+<section class="slide">
+  <div class="eyebrow">El servicio</div>
+  <h2>Nosotros manejamos todo. Tú recibes tu liquidación.</h2>
+  <div class="grilla">
+    <div class="tarjeta"><span class="num">01</span><h3>Publicación que compite</h3><p>Fotografía profesional con luz natural y anuncio optimizado en Airbnb, Booking, Vrbo y reservas directas.</p></div>
+    <div class="tarjeta"><span class="num">02</span><h3>Tarifas que cuidan tu ingreso</h3><p>Precios dinámicos según demanda, temporada y eventos en Lima, ajustados para cuidar tu ingreso por noche.</p></div>
+    <div class="tarjeta"><span class="num">03</span><h3>Huéspedes atendidos, 7 días</h3><p>Identidad verificada, normas de casa claras y atención de la consulta al check-out — también de madrugada. Check-in digital, sin llaves físicas.</p></div>
+    <div class="tarjeta"><span class="num">04</span><h3>Limpieza, cuidado y reportes</h3><p>Limpieza con control de calidad entre reservas (la paga el huésped), mantenimiento coordinado con técnicos de confianza y reporte mensual con tu liquidación.</p></div>
+  </div>
+  <div class="pie"><img src="../../../marca/activos/logo-horizontal.png" alt="Hosteo"><span>04</span></div>
+</section>
+
+<!-- 05 · TU PROYECCIÓN -->
+<section class="slide">
+  <div class="eyebrow">Tu unidad</div>
+  <h2>Cuánto podría generar tu 1 dormitorio en Miraflores</h2>
+  <table class="proyeccion" style="max-width: 920px;">
+    <tr><td>Tarifa promedio por noche estimada para tu unidad</td><td>US$ 35 – 40</td></tr>
+    <tr><td>Ocupación estimada (promedio actual de nuestro portafolio)</td><td>85%</td></tr>
+    <tr><td>Ingreso bruto mensual estimado</td><td>US$ 900 – 1,030</td></tr>
+    <tr><td>Retribución de Hosteo — 15% del neto recibido, IGV incluido</td><td>− US$ 135 – 155</td></tr>
+    <tr class="total"><td>Tu ingreso neto mensual estimado</td><td>US$ 770 – 880</td></tr>
+  </table>
+  <p class="letra-chica">Proyección referencial con tarifa estimada de US$ 35–40 por noche y 85% de ocupación (promedio de nuestro portafolio); mes de 30.4 días. No constituye garantía de ingresos. La retribución de Hosteo se calcula sobre el neto recibido tras los cargos de cada plataforma; la limpieza la paga el huésped. La valorización formal la hacemos al conocer tu unidad terminada, antes de la entrega de octubre.</p>
+  <div class="pie"><img src="../../../marca/activos/logo-horizontal.png" alt="Hosteo"><span>05</span></div>
+</section>
+
+<!-- 06 · EL MODELO -->
+<section class="slide">
+  <div class="eyebrow">El modelo</div>
+  <h2>Ganamos solo si tú ganas</h2>
+  <p class="cuerpo">Nuestra retribución es el <strong class="bronce" style="font-weight:600;">15% del neto recibido, IGV incluido</strong>. Sin costo fijo mensual: si tu propiedad no genera, no cobramos. Tu liquidación llega dentro de los 5 días hábiles del cierre de cada mes, con un reporte claro y acceso al portal de propietarios. Y si quieres usar tu depa, nos avisas y bloqueamos esas fechas: es tuyo, siempre.</p>
+  <div class="grilla" style="margin-top: 30px;">
+    <div class="tarjeta"><h3>Incluye</h3><p>Fotografía y anuncio, tarifas dinámicas, gestión de reservas y huéspedes 7 días, coordinación de limpieza y mantenimiento, liquidación mensual con reporte y portal en tiempo real.</p></div>
+    <div class="tarjeta"><h3>Por tu cuenta</h3><p>Luz, agua e internet, cuota de mantenimiento del edificio, arbitrios e impuestos, mantenimiento y menaje de la unidad. La limpieza de cada estadía la paga el huésped.</p></div>
+  </div>
+  <div class="pie"><img src="../../../marca/activos/logo-horizontal.png" alt="Hosteo"><span>06</span></div>
+</section>
+
+<!-- 07 · CIERRE -->
+<section class="slide oscura" style="justify-content: center;">
+  <div class="eyebrow">Siguiente paso</div>
+  <div class="display" style="font-size: 62px;">Dejemos tu depa listo para<br>su entrega de octubre.</div>
+  <div class="filete"></div>
+  <p class="cuerpo">Si cerramos el plan ahora, tu departamento se entrega, se implementa y sale publicado sin perder un mes de temporada.</p>
+  <p class="cuerpo" style="margin-top: 18px;">Javier Mena · Director Comercial · +51 903 191 706 · propiedades@hosteo.pe · hosteo.pe</p>
+  <div class="pie"><span class="wordmark" style="font-size:15px;">Hosteo</span><span>Confidencial — preparado para Alfredo Abregu</span></div>
+</section>
+
+</body>
+</html>

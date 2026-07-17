@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Hosteo — Propuesta para Alfredo Abregu</title>
+<style>
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../../marca/activos/fuentes/CormorantGaramond-400.woff2') format('woff2');
+    font-weight: 400; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../../marca/activos/fuentes/CormorantGaramond-500.woff2') format('woff2');
+    font-weight: 500; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../../marca/activos/fuentes/CormorantGaramond-600.woff2') format('woff2');
+    font-weight: 600; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('../../../marca/activos/fuentes/Inter-VariableFont_opsz_wght.ttf') format('truetype-variations');
+    font-weight: 100 900; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('../../../marca/activos/fuentes/Inter-Italic-VariableFont_opsz_wght.ttf') format('truetype-variations');
+    font-weight: 100 900; font-style: italic;
+  }
+
+  :root {
+    --bone: #F6F2EC; --paper: #FBF8F3; --linen: #EFE8DC; --sand: #E4DACB;
+    --taupe: #8A8170; --clay: #6B6355; --charcoal: #3A342B; --espresso: #221E18;
+    --bronze: #8A6A3B;
+    --line-1: rgba(58, 52, 43, 0.08); --line-2: rgba(58, 52, 43, 0.14);
+    --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4; margin: 0; }
+  html, body { font-family: var(--sans); color: var(--charcoal); font-size: 10.5pt; line-height: 1.6; }
+
+  .pagina {
+    width: 210mm; height: 297mm;
+    page-break-after: always; break-after: page;
+    overflow: hidden; position: relative;
+    background: var(--paper);
+    padding: 18mm 22mm 26mm;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    display: flex; flex-direction: column;
+  }
+
+  .cabecera {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-bottom: 5mm; border-bottom: 1px solid var(--line-2); margin-bottom: 8mm;
+  }
+  .cabecera img { height: 8mm; display: block; }
+  .cabecera .fecha { font-size: 8.5pt; color: var(--taupe); }
+
+  .eyebrow {
+    font-size: 8pt; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--taupe); margin-bottom: 3mm;
+  }
+  h1 {
+    font-family: var(--serif); font-weight: 500; font-size: 24pt; line-height: 1.12;
+    letter-spacing: -0.01em; margin-bottom: 5mm;
+  }
+  p { margin-bottom: 4mm; color: var(--clay); max-width: 62ch; }
+  strong { color: var(--charcoal); font-weight: 600; }
+
+  .destacado {
+    background: var(--bone); border-radius: 6px;
+    box-shadow: inset 0 0 0 1px var(--line-1);
+    padding: 5mm 6mm; margin: 4mm 0;
+  }
+  .destacado p { margin: 0; }
+
+  ul.puntos { list-style: none; margin: 4mm 0; }
+  ul.puntos li { padding: 1.8mm 0 1.8mm 7mm; position: relative; color: var(--clay); }
+  ul.puntos li::before { content: "—"; position: absolute; left: 0; color: var(--bronze); }
+
+  .firma { margin-top: 5mm; }
+  .firma .nombre { font-weight: 600; color: var(--charcoal); }
+  .firma .cargo { font-size: 9pt; color: var(--taupe); }
+
+  .pie {
+    position: absolute; left: 22mm; right: 22mm; bottom: 12mm;
+    display: flex; justify-content: space-between;
+    font-size: 7.5pt; color: var(--taupe);
+    border-top: 1px solid var(--line-1); padding-top: 3mm;
+  }
+  .letra-chica { font-size: 7.5pt; color: var(--taupe); line-height: 1.5; max-width: none; }
+</style>
+</head>
+<body>
+
+<section class="pagina">
+  <div class="cabecera">
+    <img src="../../../marca/activos/logo-horizontal.png" alt="Hosteo">
+    <div class="fecha">Lima · 17 Jul 2026</div>
+  </div>
+
+  <div class="eyebrow">Propuesta de gestión — Urban Heights, Miraflores</div>
+  <h1>Tu depa nuevo puede generar<br>desde su primer mes.</h1>
+
+  <p>Hola Alfredo:</p>
+  <p>Qué buena decisión la de Urban Heights — un 1 dormitorio de estreno en Miraflores, sobre Paseo de la República, es justo el tipo de unidad que funciona en corta estadía. Aquí está la información de la gestión que me pediste.</p>
+
+  <div class="destacado">
+    <p><strong>Nos encargamos de todo el ciclo de tu departamento — de la foto al depósito — por el 15% del neto recibido, IGV incluido.</strong> Sin costo fijo mensual: si tu depa no genera, no cobramos. Con una tarifa estimada de US$ 35–40 por noche y la ocupación promedio de nuestro portafolio (85%), tu ingreso neto estimado ronda los <strong>US$ 770 – 880 mensuales</strong>.</p>
+  </div>
+
+  <ul class="puntos">
+    <li><strong>Todo incluido</strong>: fotografía profesional, anuncio en Airbnb, Booking, Vrbo y reservas directas, precios dinámicos, huéspedes atendidos los 7 días y check-in digital. La limpieza la paga el huésped.</li>
+    <li><strong>Transparencia total</strong>: liquidación dentro de los 5 días hábiles de cada cierre de mes, con reporte claro y portal de propietarios en tiempo real. Hoy operamos 18+ propiedades con 4.9 en Airbnb y Superhost vigente.</li>
+    <li><strong>Sin ataduras</strong>: acuerdo de 1 año que se renueva solo, con salida libre avisando con 30 días. Y si quieres usar tu depa, bloqueamos tus fechas: es tuyo, siempre.</li>
+  </ul>
+
+  <p>Como referencia real: en junio, un 2 dormitorios que administramos en Miraflores liquidó <strong>S/ 5,300 netos</strong> a su propietario.</p>
+
+  <p>Tu entrega es en octubre. Si dejamos el plan cerrado ahora, coordinamos la implementación con tiempo y tu depa sale publicado sin perder un mes de temporada. ¿Conversamos esta semana y lo dejamos listo?</p>
+
+  <div class="firma">
+    <div class="nombre">Javier Mena</div>
+    <div class="cargo">Director Comercial · Hosteo</div>
+    <div class="cargo">+51 903 191 706 · propiedades@hosteo.pe</div>
+  </div>
+
+  <div class="pie">
+    <span>Hosteo · hosteo.pe</span>
+    <span>Confidencial — preparado exclusivamente para Alfredo Abregu</span>
+  </div>
+</section>
+
+</body>
+</html>

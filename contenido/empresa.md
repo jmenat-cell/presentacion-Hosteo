@@ -8,7 +8,7 @@ Fuente única de verdad sobre Hosteo. Los materiales comerciales solo pueden afi
 - **Razón social / RUC**: HOSTEO S.A.C. — RUC 20615185150
 - **Domicilio**: Parque Armendáriz 159 Int. 204, Miraflores, Lima
 - **Gerente general**: Francesca Maria Marsano Peschiera
-- **Firmas de cartas y cierres**: Javier M. hace normalmente los cierres de propiedades nuevas y firma cartas; Francesca también puede firmar como gerente general. [POR COMPLETAR: nombre completo y cargo de Javier para la firma]
+- **Director comercial**: Javier Mena — hace los cierres de propiedades nuevas y firma las cartas comerciales (Francesca también puede firmar como gerente general)
 - **Qué hace**: gestión profesional de departamentos en Airbnb y alquiler de corta estadía en Lima — de la foto al depósito — por el 15% del neto recibido, IGV incluido (el % no se publica en materiales N1).
 - **Tagline oficial**: "Hosteo tu propiedad. Tú solo cobras."
 - **Posicionamiento**: marca premium en la intersección de hospitalidad, bienes raíces y operación moderna. Socio profesional y confiable para dueños de departamentos de valor. La tecnología es invisible: se habla de resultados.
