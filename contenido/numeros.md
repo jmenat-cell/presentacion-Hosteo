@@ -1,0 +1,29 @@
+# Números y proyecciones
+
+Métricas reales de Hosteo y método para proyectar el ingreso de una unidad. **Regla dura**: si esta página está incompleta para el caso que necesitas, no proyectes — pide los datos. Un número inventado en una propuesta es un contrato perdido o un cliente decepcionado.
+
+## Métricas reales (usables desde Nivel 2, salvo que se marque N1)
+
+- **Ocupación promedio del portafolio**: [POR COMPLETAR]% (periodo: [POR COMPLETAR])
+- **Tarifa promedio por noche, por distrito y tipología**:
+
+| Distrito | Tipología | Tarifa promedio por noche | Ocupación | Periodo |
+|---|---|---|---|---|
+| [POR COMPLETAR] | [ej. 1 dorm] | S/ [—] | [—]% | [—] |
+
+- **Comparación vs. alquiler tradicional**: [POR COMPLETAR — ej. "en promedio, X% más de ingreso neto que un alquiler anual en el mismo edificio"]
+- **Casos reales anonimizados** (unidad, distrito, ingreso neto mensual promedio): [POR COMPLETAR]
+
+## Método de proyección personalizada (Nivel 2+)
+
+Cómo construir la proyección de una unidad concreta:
+
+1. Tomar tarifa promedio por noche y ocupación de la tabla anterior para el distrito y tipología más parecidos. Si no hay fila comparable → pedir el dato al usuario.
+2. Ingreso bruto mensual estimado = tarifa por noche × 30.4 × ocupación.
+3. Ingreso neto propietario = bruto − comisión de Hosteo ([POR COMPLETAR]%) − [POR COMPLETAR: otros descuentos si aplican].
+4. Presentar SIEMPRE como rango (escenario conservador / esperado) y con los supuestos visibles al pie.
+5. Nunca prometer: la palabra correcta es "estimado" o "proyección", nunca "garantizado" (salvo que el plan lo garantice por contrato).
+
+## Supuestos y letra chica estándar (copiar al pie de toda proyección)
+
+> Proyección referencial basada en el desempeño histórico de unidades comparables administradas por Hosteo. No constituye garantía de ingresos. [POR COMPLETAR: ajustar redacción legal]

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Hosteo — Presentación</title>
+<!--
+  PLANTILLA DE PRESENTACIÓN (deck 16:9, 1280×720 por slide)
+
+  Cómo usarla (ver .claude/skills/presentacion/SKILL.md):
+  1. Copiar este archivo a prospectos/<slug>/entregables/AAAA-MM-DD-presentacion-n<N>.html
+  2. Cada <section class="slide"> declara data-nivel="1|2|3": eliminar por completo
+     las slides cuyo data-nivel sea MAYOR que el nivel del material a generar.
+  3. Reemplazar todo texto entre ⟦corchetes⟧ con datos reales de contenido/ y del
+     perfil del prospecto. Si el dato real está [POR COMPLETAR], detenerse y pedirlo.
+  4. Los colores/tipografías del :root vienen de marca/sistema-diseno.md.
+  5. Renderizar: scripts/html2pdf.sh <este-archivo>.html <salida>.pdf
+-->
+<style>
+  :root {
+    --color-primario: #14343B;
+    --color-acento: #E29E4B;
+    --color-fondo: #FAF7F2;
+    --color-texto: #1D2A2E;
+    --color-texto-suave: #5A6B70;
+    --color-blanco: #FFFFFF;
+    --fuente: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: 1280px 720px; margin: 0; }
+  html, body { font-family: var(--fuente); color: var(--color-texto); }
+  .slide {
+    width: 1280px; height: 720px;
+    page-break-after: always; break-after: page;
+    overflow: hidden; position: relative;
+    background: var(--color-fondo);
+    padding: 72px 88px;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    display: flex; flex-direction: column;
+  }
+  .slide.oscura { background: var(--color-primario); color: var(--color-blanco); }
+
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
+  .wordmark .punto { color: var(--color-acento); }
+
+  .kicker {
+    font-size: 15px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--color-acento); margin-bottom: 14px;
+  }
+  h1 { font-size: 64px; line-height: 1.08; letter-spacing: -1.5px; font-weight: 800; }
+  h2 { font-size: 42px; line-height: 1.12; letter-spacing: -1px; font-weight: 800; margin-bottom: 28px; }
+  p.grande { font-size: 24px; line-height: 1.45; }
+  .suave { color: var(--color-texto-suave); }
+  .oscura .suave { color: rgba(255,255,255,0.65); }
+  .acento { color: var(--color-acento); }
+
+  .pie {
+    position: absolute; left: 88px; right: 88px; bottom: 36px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; color: var(--color-texto-suave);
+  }
+  .oscura .pie { color: rgba(255,255,255,0.55); }
+  .barra { width: 64px; height: 6px; background: var(--color-acento); border-radius: 3px; margin: 26px 0; }
+
+  .grilla { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 28px; margin-top: 8px; }
+  .tarjeta {
+    background: var(--color-blanco); border-radius: 14px; padding: 26px 28px;
+    border: 1px solid rgba(20,52,59,0.08);
+  }
+  .tarjeta h3 { font-size: 21px; margin-bottom: 8px; }
+  .tarjeta p { font-size: 16.5px; line-height: 1.45; color: var(--color-texto-suave); }
+  .tarjeta .num { font-size: 15px; font-weight: 800; color: var(--color-acento); display: block; margin-bottom: 10px; }
+
+  .cifras { display: flex; gap: 56px; margin-top: 20px; }
+  .cifra .valor { font-size: 56px; font-weight: 800; letter-spacing: -1px; color: var(--color-acento); }
+  .cifra .etiqueta { font-size: 16px; margin-top: 6px; }
+
+  table.proyeccion { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 19px; }
+  table.proyeccion td { padding: 15px 6px; border-bottom: 1px solid rgba(20,52,59,0.12); }
+  table.proyeccion td:last-child { text-align: right; font-weight: 700; }
+  table.proyeccion tr.total td { border-bottom: none; font-size: 24px; font-weight: 800; color: var(--color-primario); padding-top: 22px; }
+  table.proyeccion tr.total td:last-child { color: var(--color-acento); }
+  .letra-chica { font-size: 12.5px; line-height: 1.4; color: var(--color-texto-suave); margin-top: 18px; }
+
+  ol.pasos { list-style: none; counter-reset: paso; margin-top: 6px; }
+  ol.pasos li { counter-increment: paso; display: flex; gap: 20px; align-items: baseline; padding: 13px 0; font-size: 20px; border-bottom: 1px solid rgba(20,52,59,0.1); }
+  ol.pasos li::before {
+    content: counter(paso, decimal-leading-zero);
+    font-weight: 800; color: var(--color-acento); font-size: 17px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ SLIDE: PORTADA (data-nivel=1: va en todos los niveles) ============ -->
+<section class="slide oscura" data-nivel="1" style="justify-content: space-between;">
+  <div class="wordmark">hosteo<span class="punto">.</span></div>
+  <div>
+    <div class="kicker">Administración de alquiler de corta estadía</div>
+    <h1>Tu departamento puede<br>trabajar por ti<span class="acento">.</span></h1>
+    <div class="barra"></div>
+    <p class="grande suave">Preparado para ⟦Nombre del propietario⟧ — ⟦tipología⟧ en ⟦edificio / distrito⟧</p>
+  </div>
+  <div class="pie"><span>⟦Ciudad⟧, ⟦mes y año⟧</span><span>Confidencial — preparado exclusivamente para ⟦nombre⟧</span></div>
+</section>
+
+<!-- ============ SLIDE: LA OPORTUNIDAD (nivel 1+) ============ -->
+<section class="slide" data-nivel="1">
+  <div class="kicker">La oportunidad</div>
+  <h2>El alquiler de corta estadía rinde más — si se opera bien</h2>
+  <p class="grande" style="max-width: 980px;">⟦Copy sobre la oportunidad en su distrito: demanda de viajeros, qué logra una unidad bien operada vs. alquiler tradicional. Usar SOLO datos de contenido/numeros.md; si no hay cifra comparativa real, vender el concepto sin cifras.⟧</p>
+  <div class="cifras">
+    <div class="cifra"><div class="valor">⟦—⟧</div><div class="etiqueta suave">⟦métrica real de contenido/numeros.md⟧</div></div>
+    <div class="cifra"><div class="valor">⟦—⟧</div><div class="etiqueta suave">⟦métrica real⟧</div></div>
+    <div class="cifra"><div class="valor">⟦—⟧</div><div class="etiqueta suave">⟦métrica real⟧</div></div>
+  </div>
+  <div class="pie"><span class="wordmark" style="font-size:17px;">hosteo<span class="punto">.</span></span><span>⟦n⟧</span></div>
+</section>
+
+<!-- ============ SLIDE: QUIÉNES SOMOS (nivel 1+) ============ -->
+<section class="slide" data-nivel="1">
+  <div class="kicker">Quiénes somos</div>
+  <h2>Hosteo opera tu departamento de punta a punta</h2>
+  <p class="grande" style="max-width: 980px;">⟦Propuesta de valor y credencial de contenido/empresa.md: desde cuándo operan, dónde, en qué canales.⟧</p>
+  <div class="cifras">
+    <div class="cifra"><div class="valor">⟦—⟧</div><div class="etiqueta suave">unidades administradas</div></div>
+    <div class="cifra"><div class="valor">⟦—⟧</div><div class="etiqueta suave">calificación promedio</div></div>
+    <div class="cifra"><div class="valor">⟦—⟧</div><div class="etiqueta suave">⟦huéspedes / noches / años⟧</div></div>
+  </div>
+  <div class="pie"><span class="wordmark" style="font-size:17px;">hosteo<span class="punto">.</span></span><span>⟦n⟧</span></div>
+</section>
+
+<!-- ============ SLIDE: QUÉ HACEMOS POR TI (nivel 1+) ============ -->
+<section class="slide" data-nivel="1">
+  <div class="kicker">El servicio</div>
+  <h2>Tú no haces nada. Nosotros, todo.</h2>
+  <div class="grilla">
+    <div class="tarjeta"><span class="num">01</span><h3>Publicación profesional</h3><p>⟦Resumen N1 de contenido/servicio.md⟧</p></div>
+    <div class="tarjeta"><span class="num">02</span><h3>Precios inteligentes</h3><p>⟦Resumen N1⟧</p></div>
+    <div class="tarjeta"><span class="num">03</span><h3>Huéspedes atendidos 24/7</h3><p>⟦Resumen N1⟧</p></div>
+    <div class="tarjeta"><span class="num">04</span><h3>Limpieza y cuidado</h3><p>⟦Resumen N1⟧</p></div>
+  </div>
+  <div class="pie"><span class="wordmark" style="font-size:17px;">hosteo<span class="punto">.</span></span><span>⟦n⟧</span></div>
+</section>
+
+<!-- ============ SLIDE: TU PROYECCIÓN (nivel 2+) — ELIMINAR EN NIVEL 1 ============ -->
+<section class="slide" data-nivel="2">
+  <div class="kicker">Tu unidad</div>
+  <h2>Cuánto podría generar tu ⟦tipología⟧ en ⟦distrito⟧</h2>
+  <table class="proyeccion" style="max-width: 900px;">
+    <tr><td>Tarifa promedio por noche (unidades comparables)</td><td>S/ ⟦—⟧</td></tr>
+    <tr><td>Ocupación estimada (⟦escenario conservador–esperado⟧)</td><td>⟦—⟧%</td></tr>
+    <tr><td>Ingreso bruto mensual estimado</td><td>S/ ⟦—⟧</td></tr>
+    <tr><td>Comisión Hosteo (⟦—⟧% + IGV)</td><td>− S/ ⟦—⟧</td></tr>
+    <tr class="total"><td>Tu ingreso neto mensual estimado</td><td>S/ ⟦—⟧ – ⟦—⟧</td></tr>
+  </table>
+  <p class="letra-chica" style="max-width: 900px;">⟦Letra chica estándar de contenido/numeros.md⟧</p>
+  <div class="pie"><span class="wordmark" style="font-size:17px;">hosteo<span class="punto">.</span></span><span>⟦n⟧</span></div>
+</section>
+
+<!-- ============ SLIDE: NUESTRO MODELO (nivel 2+) — ELIMINAR EN NIVEL 1 ============ -->
+<section class="slide" data-nivel="2">
+  <div class="kicker">El modelo</div>
+  <h2>Ganamos solo si tú ganas</h2>
+  <p class="grande" style="max-width: 980px;">Nuestra comisión es el <strong class="acento">⟦—⟧% + IGV</strong> de lo que genera tu departamento. Sin ingresos, no cobramos.</p>
+  <div class="grilla" style="margin-top: 26px;">
+    <div class="tarjeta"><h3>Incluye</h3><p>⟦Qué incluye la comisión — contenido/servicio.md N2⟧</p></div>
+    <div class="tarjeta"><h3>Por tu cuenta</h3><p>⟦Qué paga el propietario — contenido/servicio.md N2⟧</p></div>
+  </div>
+  <div class="pie"><span class="wordmark" style="font-size:17px;">hosteo<span class="punto">.</span></span><span>⟦n⟧</span></div>
+</section>
+
+<!-- ============ SLIDE: CÓMO EMPEZAMOS (nivel 3) — SOLO EN NIVEL 3 ============ -->
+<section class="slide" data-nivel="3">
+  <div class="kicker">Siguiente paso</div>
+  <h2>De la firma a tu primera liquidación</h2>
+  <ol class="pasos" style="max-width: 980px;">
+    <li>⟦Paso 1 del onboarding — contenido/servicio.md sección CONFIDENCIAL N3⟧</li>
+    <li>⟦Paso 2⟧</li>
+    <li>⟦Paso 3⟧</li>
+    <li>⟦Paso 4 — primera liquidación: cuándo y cómo⟧</li>
+  </ol>
+  <div class="pie"><span class="wordmark" style="font-size:17px;">hosteo<span class="punto">.</span></span><span>⟦n⟧</span></div>
+</section>
+
+<!-- ============ SLIDE: CIERRE / CTA (nivel 1+) ============ -->
+<section class="slide oscura" data-nivel="1" style="justify-content: center;">
+  <div class="kicker">Hablemos</div>
+  <h1 style="font-size: 54px;">⟦CTA según nivel: N1 "Conversemos 20 minutos sobre tu departamento" / N2 "Reservemos la fecha de entrega de tu unidad" / N3 "Firmemos y empezamos"⟧</h1>
+  <div class="barra"></div>
+  <p class="grande suave">⟦Nombre de contacto⟧ · ⟦WhatsApp⟧ · ⟦correo⟧ · ⟦web / Instagram⟧</p>
+  <div class="pie"><span class="wordmark" style="font-size:17px;">hosteo<span class="punto">.</span></span><span>Confidencial — preparado para ⟦nombre⟧</span></div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Hosteo — Documento</title>
+<!--
+  PLANTILLA DE DOCUMENTO A4 (cartas, one-pagers y dossiers)
+
+  Cómo usarla (ver .claude/skills/carta/SKILL.md y .claude/skills/dossier/SKILL.md):
+  1. Copiar a prospectos/<slug>/entregables/AAAA-MM-DD-<tipo>-n<N>.html
+  2. Una carta = una sola <section class="pagina">. Un dossier = varias páginas:
+     duplicar <section class="pagina"> por cada página y estructurar con h2/h3.
+  3. Reemplazar los ⟦corchetes⟧ con datos reales de contenido/ y del perfil.
+     Si el dato real está [POR COMPLETAR], detenerse y pedirlo.
+  4. Colores/tipografías del :root vienen de marca/sistema-diseno.md.
+  5. Renderizar: scripts/html2pdf.sh <este-archivo>.html <salida>.pdf
+-->
+<style>
+  :root {
+    --color-primario: #14343B;
+    --color-acento: #E29E4B;
+    --color-fondo: #FAF7F2;
+    --color-texto: #1D2A2E;
+    --color-texto-suave: #5A6B70;
+    --color-blanco: #FFFFFF;
+    --fuente: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4; margin: 0; }
+  html, body { font-family: var(--fuente); color: var(--color-texto); font-size: 11pt; line-height: 1.55; }
+  .pagina {
+    width: 210mm; height: 297mm;
+    page-break-after: always; break-after: page;
+    overflow: hidden; position: relative;
+    background: var(--color-blanco);
+    padding: 20mm 22mm 26mm;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    display: flex; flex-direction: column;
+  }
+  .cabecera {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 6mm; border-bottom: 2.5px solid var(--color-primario); margin-bottom: 9mm;
+  }
+  .wordmark { font-size: 17pt; font-weight: 800; letter-spacing: -0.5px; color: var(--color-primario); }
+  .wordmark .punto { color: var(--color-acento); }
+  .cabecera .fecha { font-size: 9pt; color: var(--color-texto-suave); }
+
+  .kicker { font-size: 8.5pt; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--color-acento); margin-bottom: 3mm; }
+  h1 { font-size: 21pt; line-height: 1.15; letter-spacing: -0.5pt; margin-bottom: 7mm; color: var(--color-primario); }
+  h2 { font-size: 14pt; color: var(--color-primario); margin: 7mm 0 3mm; }
+  p { margin-bottom: 4mm; }
+  .destacado {
+    background: var(--color-fondo); border-left: 4px solid var(--color-acento);
+    border-radius: 4px; padding: 5mm 6mm; margin: 5mm 0;
+  }
+  ul.beneficios { list-style: none; margin: 4mm 0; }
+  ul.beneficios li { padding: 2mm 0 2mm 7mm; position: relative; }
+  ul.beneficios li::before { content: "—"; position: absolute; left: 0; color: var(--color-acento); font-weight: 800; }
+
+  table.datos { width: 100%; border-collapse: collapse; margin: 4mm 0; }
+  table.datos td { padding: 2.5mm 1mm; border-bottom: 1px solid rgba(20,52,59,0.12); }
+  table.datos td:last-child { text-align: right; font-weight: 700; }
+
+  .firma { margin-top: 10mm; }
+  .firma .nombre { font-weight: 800; color: var(--color-primario); }
+  .firma .cargo { font-size: 9.5pt; color: var(--color-texto-suave); }
+
+  .pie {
+    position: absolute; left: 22mm; right: 22mm; bottom: 12mm;
+    display: flex; justify-content: space-between;
+    font-size: 8pt; color: var(--color-texto-suave);
+    border-top: 1px solid rgba(20,52,59,0.15); padding-top: 3mm;
+  }
+  .letra-chica { font-size: 8pt; color: var(--color-texto-suave); line-height: 1.4; }
+</style>
+</head>
+<body>
+
+<section class="pagina">
+  <div class="cabecera">
+    <div class="wordmark">hosteo<span class="punto">.</span></div>
+    <div class="fecha">⟦Ciudad⟧, ⟦fecha en palabras⟧</div>
+  </div>
+
+  <div class="kicker">⟦Tipo: Propuesta / Carta / Dossier⟧ — ⟦para quién⟧</div>
+  <h1>⟦Título que venda el beneficio, no el documento: "Tu departamento en ⟦distrito⟧ puede darte más"⟧</h1>
+
+  <p>Hola ⟦nombre⟧:</p>
+  <p>⟦Apertura personalizada: referencia al contacto previo (quién lo refirió, la reunión, su consulta) y a SU unidad concreta. 2–3 líneas máximo.⟧</p>
+
+  <div class="destacado">
+    <strong>⟦Mensaje central del nivel: N1 = qué logra Hosteo por él sin cifras internas; N2 = la propuesta concreta con comisión y proyección; N3 = condiciones listas para firmar.⟧</strong>
+  </div>
+
+  <p>⟦Cuerpo: 2–3 párrafos según nivel, con datos reales de contenido/. En N1 cerrar invitando a una conversación; en N2 detallar propuesta; en N3 próximos pasos de firma y entrega.⟧</p>
+
+  <ul class="beneficios">
+    <li>⟦Beneficio / punto clave 1⟧</li>
+    <li>⟦Beneficio / punto clave 2⟧</li>
+    <li>⟦Beneficio / punto clave 3⟧</li>
+  </ul>
+
+  <p>⟦Cierre con llamado a la acción concreto y fácil: una respuesta, una llamada de 20 minutos, una fecha.⟧</p>
+
+  <div class="firma">
+    <div class="nombre">⟦Nombre de contacto⟧</div>
+    <div class="cargo">⟦Cargo⟧ · Hosteo</div>
+    <div class="cargo">⟦WhatsApp⟧ · ⟦correo⟧</div>
+  </div>
+
+  <div class="pie">
+    <span>hosteo. — ⟦web / Instagram⟧</span>
+    <span>Confidencial — preparado exclusivamente para ⟦nombre⟧</span>
+  </div>
+</section>
+
+</body>
+</html>
