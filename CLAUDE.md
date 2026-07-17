@@ -50,13 +50,18 @@ Doctrina del usuario para todo material comercial: los términos que el propieta
 ## Estructura
 
 ```
-contenido/       Fuente única de verdad sobre Hosteo: empresa, servicio (por nivel), números, objeciones, legal/
-marca/           Sistema de diseño (colores, tipografía, voz) y activos (logo, fotos)
+contenido/       Fuente única de verdad sobre Hosteo: empresa, servicio (por nivel), números,
+                 objeciones, copy-web.md (copy público aprobado de hosteo.pe), legal/
+marca/           Sistema de diseño (colores, tipografía, voz) y activos (logo, fuentes, fotos)
 plantillas/      Plantillas HTML: presentacion.html (deck 16:9) y documento.html (A4)
 prospectos/      Un directorio por prospecto: perfil.md + entregables/ generados (versionados a propósito)
+                 prospectos/_bandeja/ (si existe): fichas comerciales de la automatización, pendientes de revisión
 scripts/         html2pdf.sh — renderiza HTML a PDF con Chromium headless
+automatizacion/  Diseño del pipeline WhatsApp → ficha comercial → propuesta (v0 manual y v1 n8n)
 .claude/skills/  Flujos de trabajo (ver abajo)
 ```
+
+Regla de coherencia con la web: hosteo.pe define el estándar de lo público. Ningún material N1 revela más que la web — en particular, la web NO publica el % de comisión ("se define en la valorización gratuita"), así que el 15% aparece solo desde N2.
 
 ## Flujo de trabajo y skills
 
@@ -107,11 +112,11 @@ La identidad completa está en `marca/sistema-diseno.md` (resumen operativo) y `
 
 ## Estado actual / pendientes del usuario
 
-- [ ] Métricas reales en `contenido/numeros.md`: ocupación, tarifa promedio por noche por distrito/tipología, comparativa vs. alquiler tradicional, casos reales. **Sin esto no se pueden generar proyecciones (slides N2).**
-- [ ] `contenido/empresa.md`: año de inicio, número de unidades, lista completa de distritos, WhatsApp, Instagram, nombre y cargo de quien firma las cartas, testimonios autorizados.
-- [ ] Confirmar estatus Superhost antes de usarlo en materiales.
-- [ ] Política de noches del propietario (cómo se ofrece comercialmente) y cobertura de daños exacta (AirCover/depósitos/seguro) — ver `[POR COMPLETAR]` en `contenido/servicio.md` y `objeciones.md`.
-- [ ] Detalle operativo N3 para el dossier: onboarding paso a paso, checklist de entrega, primeros 30 días.
-- [ ] Fotos reales de unidades en `marca/activos/` y, si existe, logo en SVG o en paleta cálida.
+- [ ] **Tarifa promedio por noche por distrito/tipología** (exportable de Hostaway) — lo único que falta para proyecciones N2 completas. Ya se tiene: 85% ocupación, 4.9 en Airbnb, caso real S/ 5,300 (Jun 2026, 2 hab Miraflores).
+- [ ] `contenido/empresa.md`: año de inicio, cargo público de Francesca y quién firma las cartas, testimonios autorizados.
+- [ ] Confirmar estatus Superhost y el periodo del 85% de ocupación; confirmar que S/ 5,300 es pago neto al propietario.
+- [ ] Detalle operativo N3 para el dossier: onboarding interno paso a paso, checklist de entrega, primeros 30 días (la versión pública de 3 pasos ya está en `contenido/copy-web.md`).
+- [ ] Fotos de más unidades en `marca/activos/` (la web usa prop-miraflores.jpg, prop-san-isidro.jpg, prop-barranco.jpg, etc. — solo se entregó foto-hero.jpg) y, si existe, logo en SVG o en paleta cálida.
+- [ ] Automatización WhatsApp→ficha v1: decisiones pendientes en `automatizacion/whatsapp-a-ficha.md`.
 
 Cuando el usuario entregue algo de esto: intégralo en `contenido/` o `marca/`, borra el marcador correspondiente y actualiza esta lista.

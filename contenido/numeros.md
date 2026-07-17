@@ -4,17 +4,19 @@ Métricas reales de Hosteo y método para proyectar el ingreso de una unidad. **
 
 Formato de cifras (regla de marca): moneda con espacio `S/ 4,280` (`US$` secundario) · porcentajes sin decimales `92%` · fechas `15 Abr 2026`.
 
-## Métricas reales (usables desde Nivel 2, salvo que se marque N1)
+## Métricas reales
 
-- **Ocupación promedio del portafolio**: [POR COMPLETAR]% (periodo: [POR COMPLETAR])
-- **Tarifa promedio por noche, por distrito y tipología**:
+- **Ocupación promedio del portafolio**: 85% — publicada en hosteo.pe, usable desde N1. [POR COMPLETAR: periodo exacto]
+- **Calificación en Airbnb**: 4.9 — publicada, usable desde N1.
+- **Caso real publicado en la web** (usable desde N1 por ser público, ideal en N2): "Departamento en Miraflores — 2 hab.": liquidación de Junio 2026 por **S/ 5,300** (portal muestra "Pagada"), con ~26 de 30 noches ocupadas (≈87%) según el calendario publicado. [POR CONFIRMAR: si S/ 5,300 es el pago neto al propietario después de la retribución — el rótulo "liquidación" sugiere que sí]
+- **Tarifa promedio por noche, por distrito y tipología** (la pieza que falta para proyectar):
 
 | Distrito | Tipología | Tarifa promedio por noche | Ocupación | Periodo |
 |---|---|---|---|---|
 | [POR COMPLETAR] | [ej. 1 dorm] | S/ [—] | [—]% | [—] |
 
 - **Comparación vs. alquiler tradicional**: [POR COMPLETAR — ej. "en promedio, X% más de ingreso neto que un alquiler anual en el mismo edificio"]
-- **Casos reales anonimizados** (unidad, distrito, ingreso neto mensual promedio): [POR COMPLETAR]
+- **Más casos reales anonimizados** (unidad, distrito, ingreso neto mensual promedio): [POR COMPLETAR — exportable de Hostaway]
 
 ## Método de proyección personalizada (Nivel 2+)
 

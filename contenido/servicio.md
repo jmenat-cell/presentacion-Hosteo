@@ -29,14 +29,15 @@ Hosteo se encarga de todo el ciclo del alquiler de corta estadía de tu departam
 
 ## Detalle del servicio (Nivel 2+)
 
-Para cada punto del resumen, el detalle que ve un interesado real:
+Para cada punto del resumen, el detalle que ve un interesado real (el copy textual aprobado está en `contenido/copy-web.md`):
 
-- **Publicación**: anuncio gestionado por Hosteo en Airbnb, Booking, Vrbo y reservas directas (Hostaway). [POR COMPLETAR: fotos profesionales incluidas o no, quién figura como anfitrión, tiempos de publicación]
-- **Tarifas**: Hosteo administra tarifas, descuentos y mínimos de noches para maximizar ingreso y proteger la unidad. (El "cómo" — herramientas y estrategia — es N3/confidencial.)
-- **Huéspedes**: comunicación y gestión de inicio a fin; Hosteo puede rechazar solicitudes que no generen confianza o representen riesgo para la unidad, los vecinos o el edificio.
-- **Limpieza**: coordinada por Hosteo entre estadías, pagada por el huésped. [POR COMPLETAR: estándar prometido — ropa de cama, amenities, inspección]
-- **Cuidado de la unidad**: coordinación de mantenimiento; resolución directa de incidencias menores (≤ S/ 500) para no perder reservas; urgencias atendidas de inmediato. [POR COMPLETAR: cobertura de daños — depósitos, AirCover/seguros, y datos de siniestralidad si existen]
-- **Reportes**: liquidación mensual dentro de 5 días hábiles con reporte. [POR COMPLETAR: qué contiene exactamente el reporte / acceso a dashboard]
+- **Publicación**: fotografía profesional producida por Hosteo ("luz natural y encuadres reales") y anuncio optimizado en Airbnb, Booking, Vrbo y reservas directas (booking.hosteo.pe). [POR COMPLETAR: quién figura como anfitrión ante el huésped]
+- **Tarifas**: precios dinámicos según demanda, temporada y eventos en Lima; Hosteo administra tarifas, descuentos y mínimos de noches. (El "cómo" — herramientas y estrategia — es N3/confidencial.)
+- **Huéspedes**: atención de cada consulta, reserva y check-out los 7 días de la semana, también de madrugada; huéspedes con identidad verificada y normas de casa claras; Hosteo puede rechazar solicitudes que no generen confianza.
+- **Check-in digital**: acceso sin llaves físicas — cómodo para el huésped, seguro para el propietario ("nadie guarda copias").
+- **Limpieza**: con control de calidad entre cada reserva, pagada por el huésped. [POR COMPLETAR: estándar prometido — ropa de cama, amenities, inspección]
+- **Cuidado de la unidad**: mantenimiento coordinado "antes de que un detalle se vuelva un problema", con técnicos de confianza; incidencias menores (≤ S/ 500) se resuelven directo para no perder reservas; urgencias de inmediato. Daños de huéspedes: identidad verificada + AirCover para anfitriones en reservas Airbnb + gestión del reclamo de inicio a fin por Hosteo. [POR COMPLETAR: cobertura en reservas no-Airbnb — depósitos/seguro]
+- **Reportes y portal**: liquidación mensual dentro de 5 días hábiles con reporte claro (ingresos, ocupación, gastos y estado de la propiedad) + portal de propietarios con calendario en tiempo real, y bloqueo de fechas propias avisando a Hosteo.
 
 ## CONFIDENCIAL (N3) — Operación interna
 

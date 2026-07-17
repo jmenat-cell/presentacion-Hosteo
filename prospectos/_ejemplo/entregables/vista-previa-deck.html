@@ -64,6 +64,11 @@
   }
   .slide.oscura { background: var(--espresso); color: var(--paper); }
 
+  /* Portada con fotografía (variante B): foto full-bleed + velo espresso sólido */
+  .foto-fondo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .velo { position: absolute; inset: 0; background: rgba(34, 30, 24, 0.66); }
+  .sobre-foto { position: relative; }
+
   .eyebrow {
     font-size: 13px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--taupe); margin-bottom: 18px;
@@ -134,7 +139,9 @@
 </head>
 <body>
 
-<!-- ============ PORTADA (data-nivel=1: va en todos los niveles) ============ -->
+<!-- ============ PORTADA — DOS VARIANTES: conservar UNA y eliminar la otra ============ -->
+
+<!-- PORTADA A — espresso sobrio (sin foto) -->
 <section class="slide oscura" data-nivel="1" style="justify-content: space-between;">
   <div class="wordmark">Hosteo</div>
   <div>
@@ -144,6 +151,21 @@
     <p class="cuerpo">Preparado para ⟦Nombre del propietario⟧ · ⟦tipología⟧ en ⟦edificio / distrito⟧</p>
   </div>
   <div class="pie"><span>⟦Ciudad⟧ · ⟦15 Abr 2026⟧</span><span>Confidencial — preparado exclusivamente para ⟦nombre⟧</span></div>
+</section>
+
+<!-- PORTADA B — con fotografía real (preferida si hay foto adecuada; idealmente
+     una foto de una unidad Hosteo del MISMO distrito del prospecto) -->
+<section class="slide oscura" data-nivel="1" style="justify-content: space-between;">
+  <img class="foto-fondo" src="../../../marca/activos/foto-hero.jpg" alt="">
+  <div class="velo"></div>
+  <div class="wordmark sobre-foto">Hosteo</div>
+  <div class="sobre-foto">
+    <div class="eyebrow">Administración de alquiler de corta estadía · Lima</div>
+    <div class="display">Hosteo tu propiedad.<br>Tú solo cobras.</div>
+    <div class="filete"></div>
+    <p class="cuerpo">Preparado para ⟦Nombre del propietario⟧ · ⟦tipología⟧ en ⟦edificio / distrito⟧</p>
+  </div>
+  <div class="pie sobre-foto"><span>⟦Ciudad⟧ · ⟦15 Abr 2026⟧</span><span>Confidencial — preparado exclusivamente para ⟦nombre⟧</span></div>
 </section>
 
 <!-- ============ LA OPORTUNIDAD (nivel 1+) ============ -->

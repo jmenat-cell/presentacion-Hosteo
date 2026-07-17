@@ -22,6 +22,15 @@ El argumento es el nombre del prospecto (y opcionalmente datos sueltos: distrito
    Explica brevemente al usuario por qué recomiendas ese nivel; él tiene la última palabra.
 5. **Cierra** proponiendo el siguiente paso natural: generar el material del nivel (`/presentacion`, `/carta` o `/dossier`).
 
+## Modo conversación de WhatsApp
+
+Si el usuario pega o sube una conversación de WhatsApp con el prospecto (texto o export .txt), antes de crear el perfil produce la **ficha comercial** y muéstrasela para validar:
+
+1. Extrae SOLO lo que la conversación evidencia (nada inferido como si fuera dato): nombre y contacto; unidad (edificio, distrito, tipología, m², amoblado); origen del contacto; qué pidió exactamente y con qué urgencia; objeciones o dudas que planteó (mapear contra `contenido/objeciones.md`); señales de pesca (interés en el "cómo" operativo, evasivas a reunirse, es del rubro) vs. interés real (pregunta números, condiciones, plazos, disponibilidad); nivel recomendado con justificación de una línea; siguiente paso comercial sugerido.
+2. Presenta la ficha en un bloque claro. El usuario corrige o aprueba.
+3. Con la aprobación: crea/actualiza el perfil (pasos de arriba), registra en el historial "ficha generada desde conversación de WhatsApp del ⟦fecha⟧" y sugiere el material del nivel.
+4. Privacidad: no copies la conversación completa al repo — al perfil van los datos de la ficha y un resumen de 2–3 líneas. El formato de ficha está en `automatizacion/whatsapp-a-ficha.md`.
+
 ## Reglas
 
 - El nivel registrado en el perfil es el tope para todo material posterior (regla dura de `CLAUDE.md`).
