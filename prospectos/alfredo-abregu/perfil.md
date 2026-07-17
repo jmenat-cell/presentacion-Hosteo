@@ -6,7 +6,7 @@
 - **Origen**: referido de red de confianza — grupo de mentoría de Fernando Contini (conexión adicional: Carlos, tío de Fernando, comprador en TyC)
 - **Nivel de revelación autorizado**: 2 (aprobado por Javier el 17 Jul 2026)
 - **Interés percibido**: caliente
-- **Estado**: contactado — propuesta N2 generada, por enviar por WhatsApp
+- **Estado**: propuesta enviada — esperando respuesta de Alfredo
 
 ## Unidad(es)
 
@@ -25,10 +25,11 @@
 - 2026-07-11 a 14: llamadas y audios con Javier; evaluó Element y Affinity (Edifica).
 - 2026-07-15: separó su depa en Urban Heights (Edifica, Miraflores); pidió "ver la gestión del inmueble" y que se le pase la información por WhatsApp.
 - 2026-07-17: ficha generada desde conversación de WhatsApp del 9–16 Jul y aprobada por Javier; nivel 2 autorizado. Parámetros de proyección definidos. Propuesta N2 (carta + presentación) generada.
+- 2026-07-17: Javier envió la propuesta N2 por WhatsApp. Alfredo la revisa y avisa.
 
 ## Entregables enviados
 
 | Fecha | Tipo | Nivel | Archivo | Canal de envío | Respuesta |
 |---|---|---|---|---|---|
-| 17 Jul 2026 | Carta | 2 | entregables/2026-07-17-carta-n2.pdf | Por enviar (WhatsApp) | — |
-| 17 Jul 2026 | Presentación | 2 | entregables/2026-07-17-presentacion-n2.pdf | Por enviar (WhatsApp) | — |
+| 17 Jul 2026 | Carta | 2 | entregables/2026-07-17-carta-n2.pdf | WhatsApp — enviado 17 Jul | Pendiente |
+| 17 Jul 2026 | Presentación | 2 | entregables/2026-07-17-presentacion-n2.pdf | WhatsApp — enviado 17 Jul | Pendiente |
