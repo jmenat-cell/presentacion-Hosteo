@@ -68,6 +68,15 @@ Regla dura heredada de CLAUDE.md: la ficha solo contiene lo que la conversación
 - El repo es privado; las fichas contienen datos personales — mismas reglas que `prospectos/` (no publicar, no copiar fuera).
 - En n8n: no loggear el cuerpo de los chats; borrar ejecuciones antiguas.
 
+## Economía de tokens (decisión de diseño, 17 Jul 2026)
+
+Preocupación del usuario: no gastar tokens releyendo contexto en cada generación. Resolución — cada pieza donde rinde:
+
+- **Extracción chat→ficha**: es el paso barato y automatizable — prompt fijo contra la API, sin ningún contexto del repo (centavos por prospecto). Por eso vive en n8n.
+- **Generación de material**: aquí NO se ahorra. Se evaluó generar los PDF sin IA (mail-merge de la plantilla en n8n, costo cero) y se descartó: se pierde el criterio de revelación por nivel, el copy personalizado a la situación del prospecto y la presentación honesta de proyecciones — exactamente lo que cierra ventas. Decisión explícita del usuario: calidad para el cliente primero, el costo en tokens no importa.
+- **La palanca de ahorro real sin perder calidad**: procesar en lote. Una sola sesión procesa TODA la bandeja pendiente (el contexto se lee una vez y se amortiza entre prospectos). Con volumen: una Routine programada (diaria o semanal según flujo) que procese la bandeja y deje los borradores listos para revisión.
+- Los skills ya limitan la relectura: cada uno indica exactamente qué archivos leer; ninguna sesión necesita "releer todo".
+
 ## Pendientes para implementar v1
 
 - [ ] Decidir la entrada: (a) correo dedicado — recomendada para empezar — o (b) WhatsApp Cloud API.
