@@ -31,6 +31,16 @@ Si el usuario pega o sube una conversación de WhatsApp con el prospecto (texto 
 3. Con la aprobación: crea/actualiza el perfil (pasos de arriba), registra en el historial "ficha generada desde conversación de WhatsApp del ⟦fecha⟧" y sugiere el material del nivel.
 4. Privacidad: no copies la conversación completa al repo — al perfil van los datos de la ficha y un resumen de 2–3 líneas. El formato de ficha está en `automatizacion/whatsapp-a-ficha.md`.
 
+## Modo bandeja (fichas de la automatización n8n)
+
+Si el usuario dice "procesa la bandeja" o existen archivos `.md` en `prospectos/_bandeja/` (además del LEEME):
+
+1. Lee TODAS las fichas pendientes — una sola sesión procesa el lote completo (decisión de economía de tokens: el contexto se lee una vez).
+2. Presenta al usuario un resumen de cada ficha marcada `(SIN REVISAR)` y pide su aprobación o correcciones (en lote, no una por una).
+3. Por cada ficha aprobada: crea o actualiza el perfil siguiendo los pasos de arriba (la ficha ya trae nivel recomendado y siguiente paso), registra en el historial "ficha procesada desde la bandeja (⟦archivo⟧)", y **elimina el archivo de la bandeja** (`git rm`) — su contenido ya vive en el perfil.
+4. Ofrece generar en la misma sesión el material del nivel de cada prospecto aprobado.
+5. Fichas rechazadas o de curiosos sin valor comercial: eliminarlas de la bandeja con el visto bueno del usuario, sin crear perfil.
+
 ## Reglas
 
 - El nivel registrado en el perfil es el tope para todo material posterior (regla dura de `CLAUDE.md`).

@@ -5,7 +5,7 @@ Idea del usuario (17 Jul 2026), refinada. Objetivo: que las conversaciones de Wh
 ## Estado
 
 - **v0 (funciona HOY, sin infraestructura)**: exportar el chat desde WhatsApp (Ajustes del chat → Exportar chat → Sin archivos) o copiar/pegar los mensajes, y entregarlo en una sesión de Claude Code con `/prospecto`. El skill produce la ficha, el usuario la aprueba y se crea el perfil. Ver "Modo conversación de WhatsApp" en `.claude/skills/prospecto/SKILL.md`.
-- **v1 (n8n, por implementar)**: pipeline automático descrito abajo. n8n NO está conectado por MCP a Claude actualmente; la integración v1 ni siquiera lo necesita (usa nodos nativos de n8n). Si además se quiere invocar flujos de n8n desde Claude, n8n ofrece el nodo "MCP Server Trigger" que expone el flujo como servidor MCP — se agrega en claude.ai → Configuración → Conectores como conector personalizado.
+- **v1 (n8n, plan de implementación cerrado)**: pipeline automático descrito abajo. **El plan ejecutable, nodo a nodo, está en `automatizacion/plan-v1.md`** (con tareas T1–T4 para la sesión ejecutora y checklist de auditoría); el prompt canónico del nodo de extracción vive en `automatizacion/prompt-ficha.md`. n8n NO está conectado por MCP a Claude actualmente; la integración v1 ni siquiera lo necesita (usa nodos nativos de n8n). Si además se quiere invocar flujos de n8n desde Claude, n8n ofrece el nodo "MCP Server Trigger" que expone el flujo como servidor MCP — se agrega en claude.ai → Configuración → Conectores como conector personalizado.
 
 ## Arquitectura v1 (n8n)
 
@@ -21,7 +21,7 @@ WhatsApp ──(a/b/c)──▶ n8n ──▶ Claude API (extracción) ──▶
 **(b) Entrada automática — WhatsApp Business Cloud API**: webhook oficial de Meta → n8n. Requiere migrar el número (o uno secundario) a la API; más setup, tiempo real.
 **(c) Entrada no oficial (Evolution API/WAHA)**: se conecta al WhatsApp personal, pero infringe términos de servicio de WhatsApp y arriesga el número comercial. **No recomendada** para el número principal de Hosteo.
 
-**Nodos n8n del flujo**: Trigger (correo o webhook) → filtro "es un prospecto" → HTTP Request a `https://api.anthropic.com/v1/messages` (modelo `claude-sonnet-5`, económico y suficiente para extracción) con el prompt de abajo → validación JSON → nodo GitHub: crear archivo `prospectos/_bandeja/AAAA-MM-DD-<slug>.md` en este repo → (opcional) notificación al usuario por correo/Telegram con el resumen.
+**Nodos n8n del flujo**: Trigger (correo) → filtro "es un chat" → extracción del texto → HTTP Request a `https://api.anthropic.com/v1/messages` (modelo `claude-opus-5` — la ficha requiere criterio comercial, y el costo por ficha es de centavos) con el prompt canónico → validación y parseo → nodo GitHub: crear archivo `prospectos/_bandeja/AAAA-MM-DD-<slug>.md` en este repo → notificación a Javier por correo. Spec completa nodo a nodo: `plan-v1.md`.
 
 ## Formato de la ficha comercial (el contrato entre automatización y repo)
 
@@ -52,9 +52,9 @@ WhatsApp ──(a/b/c)──▶ n8n ──▶ Claude API (extracción) ──▶
 
 Regla dura heredada de CLAUDE.md: la ficha solo contiene lo que la conversación evidencia. Campo sin dato = `desconocido`, nunca un valor plausible.
 
-## Prompt listo para el nodo de n8n (system prompt)
+## Prompt del nodo de n8n (system prompt)
 
-> Eres el asistente comercial de Hosteo, empresa peruana que administra departamentos en alquiler de corta estadía en Lima por cuenta de sus propietarios. Recibirás una conversación de WhatsApp entre Hosteo y un potencial cliente (propietario de departamento). Devuelve ÚNICAMENTE la ficha comercial en el formato markdown acordado (sin comentarios adicionales). Extrae solo lo que la conversación evidencia; si un dato no aparece, escribe "desconocido" — nunca inventes ni infieras valores plausibles. Clasifica las señales: interés real (pregunta por números, condiciones, plazos, disponibilidad, agenda reunión) vs. pesca de información (pregunta por el cómo operativo — herramientas, proveedores, tarifas internas —, evita reunirse, parece del rubro). Recomienda nivel de revelación: 1 teaser (primer contacto o señales de pesca), 2 propuesta (interés real sobre SU unidad), 3 cierre (listo para firmar). El formato de la ficha es: [pegar aquí el bloque "Formato de la ficha comercial"].
+El prompt canónico y completo vive en **`automatizacion/prompt-ficha.md`** (incluye el formato de la ficha embebido). Se pega verbatim en el nodo HTTP de n8n; si se edita el archivo, hay que re-pegarlo en el nodo.
 
 ## Revisión y procesamiento (human-in-the-loop, innegociable)
 

@@ -118,6 +118,6 @@ Resuelto: Superhost vigente ✓ · S/ 5,300 es neto al propietario ✓ · tarifa
 - [ ] Detalle operativo N3 para el dossier: onboarding interno paso a paso, checklist de entrega, primeros 30 días (la versión pública de 3 pasos ya está en `contenido/copy-web.md`).
 - [ ] Casos reales adicionales por distrito/tipología (export de Hostaway) para respaldar proyecciones.
 - [ ] Logo en SVG o paleta cálida, si existe.
-- [ ] Automatización WhatsApp→ficha v1: decisiones pendientes en `automatizacion/whatsapp-a-ficha.md`.
+- [ ] Automatización WhatsApp→ficha v1: plan de implementación cerrado en `automatizacion/plan-v1.md` — falta que una sesión ejecutora haga T1–T4, que Javier configure n8n (checklist en el plan) y la auditoría final.
 
 Cuando el usuario entregue algo de esto: intégralo en `contenido/` o `marca/`, borra el marcador correspondiente y actualiza esta lista.
