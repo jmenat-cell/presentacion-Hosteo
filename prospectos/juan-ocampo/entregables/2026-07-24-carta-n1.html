@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Hosteo — Carta para Juan Ocampo</title>
+<style>
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../../marca/activos/fuentes/CormorantGaramond-400.woff2') format('woff2');
+    font-weight: 400; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../../marca/activos/fuentes/CormorantGaramond-500.woff2') format('woff2');
+    font-weight: 500; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../../marca/activos/fuentes/CormorantGaramond-600.woff2') format('woff2');
+    font-weight: 600; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('../../../marca/activos/fuentes/Inter-VariableFont_opsz_wght.ttf') format('truetype-variations');
+    font-weight: 100 900; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('../../../marca/activos/fuentes/Inter-Italic-VariableFont_opsz_wght.ttf') format('truetype-variations');
+    font-weight: 100 900; font-style: italic;
+  }
+
+  :root {
+    --bone: #F6F2EC; --paper: #FBF8F3; --linen: #EFE8DC; --sand: #E4DACB;
+    --taupe: #8A8170; --clay: #6B6355; --charcoal: #3A342B; --espresso: #221E18;
+    --bronze: #8A6A3B;
+    --line-1: rgba(58, 52, 43, 0.08); --line-2: rgba(58, 52, 43, 0.14);
+    --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4; margin: 0; }
+  html, body { font-family: var(--sans); color: var(--charcoal); font-size: 10.5pt; line-height: 1.6; }
+
+  .pagina {
+    width: 210mm; height: 297mm;
+    page-break-after: always; break-after: page;
+    overflow: hidden; position: relative;
+    background: var(--paper);
+    padding: 18mm 22mm 26mm;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    display: flex; flex-direction: column;
+  }
+
+  .cabecera {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-bottom: 5mm; border-bottom: 1px solid var(--line-2); margin-bottom: 8mm;
+  }
+  .cabecera img { height: 8mm; display: block; }
+  .cabecera .fecha { font-size: 8.5pt; color: var(--taupe); }
+
+  .eyebrow {
+    font-size: 8pt; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--taupe); margin-bottom: 3mm;
+  }
+  h1 {
+    font-family: var(--serif); font-weight: 500; font-size: 24pt; line-height: 1.12;
+    letter-spacing: -0.01em; margin-bottom: 4mm;
+  }
+  p { margin-bottom: 3.5mm; color: var(--clay); max-width: 62ch; }
+  strong { color: var(--charcoal); font-weight: 600; }
+
+  .destacado {
+    background: var(--bone); border-radius: 6px;
+    box-shadow: inset 0 0 0 1px var(--line-1);
+    padding: 4.5mm 6mm; margin: 3.5mm 0;
+  }
+  .destacado p { margin: 0; }
+
+  ul.puntos { list-style: none; margin: 3mm 0; }
+  ul.puntos li { padding: 1.5mm 0 1.5mm 7mm; position: relative; color: var(--clay); }
+  ul.puntos li::before { content: "—"; position: absolute; left: 0; color: var(--bronze); }
+
+  .firma { margin-top: 5mm; }
+  .firma .nombre { font-weight: 600; color: var(--charcoal); }
+  .firma .cargo { font-size: 9pt; color: var(--taupe); }
+
+  .pie {
+    position: absolute; left: 22mm; right: 22mm; bottom: 12mm;
+    display: flex; justify-content: space-between;
+    font-size: 7.5pt; color: var(--taupe);
+    border-top: 1px solid var(--line-1); padding-top: 3mm;
+  }
+</style>
+</head>
+<body>
+
+<section class="pagina">
+  <div class="cabecera">
+    <img src="../../../marca/activos/logo-horizontal.png" alt="Hosteo">
+    <div class="fecha">Lima · 24 Jul 2026</div>
+  </div>
+
+  <div class="eyebrow">La información que pediste — San Isidro</div>
+  <h1>Tu departamento en San Isidro<br>puede darte más.</h1>
+
+  <p>Hola Juan:</p>
+  <p>Gracias por escribirnos. Un 2 dormitorios amoblado a una cuadra de la Embajada de España es justo el perfil que funciona en corta estadía en San Isidro. Nos pediste información y costos antes de avanzar: aquí van, por escrito.</p>
+
+  <div class="destacado">
+    <p><strong>Nos encargamos de tu departamento de principio a fin — fotografía, precios, huéspedes, limpieza y mantenimiento — y cobramos solo por comisión sobre los ingresos que genera.</strong> Sin costo fijo mensual: si tu propiedad no renta, nosotros no cobramos. El porcentaje se define en la valorización gratuita, según las características de tu unidad, y queda por escrito en el acuerdo.</p>
+  </div>
+
+  <ul class="puntos">
+    <li><strong>Gestión completa</strong>: anuncio profesional en Airbnb, Booking, Vrbo y reservas directas; tarifas administradas por temporada; huéspedes atendidos los 7 días; limpieza y mantenimiento coordinados.</li>
+    <li><strong>Resultados verificables</strong>: 18+ propiedades en gestión, 85% de ocupación promedio, calificación 4.9 en Airbnb y Superhost vigente. Operamos San Isidro, Miraflores y Barranco de primera mano.</li>
+    <li><strong>Tú solo cobras</strong>: cada mes recibes tu liquidación con un reporte claro de ingresos y ocupación, y un portal de propietarios para verlo todo en tiempo real.</li>
+  </ul>
+
+  <p>Una referencia real: en junio, un 2 dormitorios que administramos en Miraflores liquidó <strong>S/ 5,300 netos</strong> a su propietario. Lo que genere el tuyo depende de su ubicación, características y fotos — por eso trabajamos con valorizaciones, no con promesas.</p>
+
+  <p>El siguiente paso es gratuito y sin compromiso: visitamos tu departamento y te entregamos una proyección de ingresos honesta para tu unidad. Respóndenos este WhatsApp y coordinamos la visita →</p>
+
+  <div class="firma">
+    <div class="nombre">Javier Mena</div>
+    <div class="cargo">Director Comercial · Hosteo</div>
+    <div class="cargo">+51 903 191 706 · propiedades@hosteo.pe</div>
+  </div>
+
+  <div class="pie">
+    <span>Hosteo · hosteo.pe</span>
+    <span>Confidencial — preparado exclusivamente para Juan Ocampo</span>
+  </div>
+</section>
+
+</body>
+</html>
